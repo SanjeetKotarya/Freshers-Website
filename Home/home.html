@@ -1,0 +1,810 @@
+<style>
+  .home-page {
+    background-color: #FAF6F0;
+  }
+
+  .home-page .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(transparent 50%, #10141B);
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .intro {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+
+  .message {
+    position: relative;
+  }
+
+  .btn {
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    width: 80px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .show,
+  .hide {
+    position: absolute;
+    top: 15px;
+    right: 10%;
+    z-index: 5;
+    font-family: MuseoModerno;
+    text-align: center;
+    display: none;
+  }
+
+
+
+  .panel {
+    position: relative;
+    margin: 2em auto;
+    width: 80%;
+    max-height: fit-content;
+    overflow: hidden;
+    font-family: Poppins;
+    font-size: 18px;
+  }
+
+  .scroll-effect {
+    border-radius: 0;
+  }
+
+
+
+  hr {
+    background-color: #E0DACE;
+    height: 1px;
+    width: 70%;
+    border: none;
+    margin: 50px auto;
+  }
+
+
+  .section-one__first--letter {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Josefin Sans;
+    line-height: 4rem;
+    color: transparent;
+    background-image: linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, .8) 50%, transparent 52%), linear-gradient(45deg, #b6a571, #cdb373, #e7da9a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 500% 500%, 100% 100%;
+    animation: backgroudFade 2s linear infinite normal backwards;
+  }
+
+  @keyframes backgroudFade {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+
+  @media only screen and (max-width: 900px) {
+    .section-one__first--letter {
+      font-size: 24px;
+    }
+
+    .panel {
+      font-size: 15px;
+      max-height: 200px;
+    }
+
+    .show,
+    .hide {
+      display: block;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .show:target {
+      display: none;
+    }
+
+    .show:target~.hide {
+      display: block;
+    }
+
+    .show:target~.panel {
+      max-height: fit-content;
+    }
+
+    .show:target~.fade {
+      margin-top: 0;
+    }
+  }
+
+
+  .ScrollDown_box {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0px;
+    padding: 10px;
+  }
+
+  .btn_ScrollDown {
+    display: block;
+    padding-top: 84px;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .btn_ScrollDown fish {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -15px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+
+    animation: sdb4 1.5s infinite;
+    box-sizing: border-box;
+  }
+
+  .btn_ScrollDown span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -15px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+
+  .btn_ScrollDown span:nth-of-type(1) {
+    animation: sdb1 1.5s infinite;
+    animation-delay: .2s;
+  }
+
+  .btn_ScrollDown span:nth-of-type(2) {
+    animation: sdb2 1.5s infinite;
+    top: 10px;
+    animation-delay: .6s;
+  }
+
+
+  @keyframes sdb4 {
+    0% {
+      transform: scale(0) translateY(0) rotate(-45deg);
+    }
+
+    20% {
+      transform: scale(1) rotate(-45deg);
+    }
+
+    100% {
+      transform: translateY(25px) rotate(-45deg);
+    }
+  }
+
+  @keyframes sdb1 {
+    0% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes sdb2 {
+    0% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
+
+<style>
+  .vision,
+  .mission {
+    width: 60%;
+    text-align: center;
+    margin: 40px auto;
+  }
+  .vision{
+    padding-bottom: 40px;
+  }
+
+  .vision p {
+    font-family: Poppins;
+    display: block;
+    font-size: 20px;
+  }
+
+  .title {
+    font-family: Josefin Sans;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 40px 0;
+  }
+
+  .values {
+    width: 80%;
+    height: 70vh;
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+    margin: 50px auto;
+    padding-bottom: 50px;
+  }
+
+  .values h4 {
+    font-family: 'MuseoModerno', cursive;
+    font-size: 14px;
+    width: fit-content;
+    color: #9FA1AD;
+  }
+
+  .values h1 {
+    font-family: Josefin Sans;
+    width: 80%;
+    font-size: 30px;
+  }
+
+  .values ul {
+    font-family: Poppins;
+    counter-increment: list-number;
+    margin-left: -30px;
+    font-size: 18px;
+    list-style-type: decimal;
+  }
+
+  .values ul li {
+    margin-top: 10px;
+  }
+
+  .values .child1 {
+    width: 100%;
+    text-align: right;
+    overflow: hidden;
+  }
+
+  .values .child1 img {
+    position: relative;
+    width: 100%;
+  }
+
+  .values .child2 span {
+    position: absolute;
+    background-color: #242633;
+    padding: 50px 80px;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    max-height: 700px;
+    box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+    left: -50px;
+    top: 30px;
+  }
+
+  .values .child2 {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    position: relative;
+  }
+
+
+
+  @media only screen and (max-width: 900px) {
+
+    .title {
+      font-size: 35px;
+    }
+
+    .values h4 {
+      font-size: 11px;
+    }
+
+    .values h1 {
+      width: 100%;
+      font-size: 25px;
+    }
+
+    .vision,
+    .mission {
+      width: 90%;
+    }
+
+    .vision p {
+      font-size: 15px;
+    }
+
+    .values {
+      width: 100%;
+      display: block;
+      margin-bottom: 50px;
+      height: 70vh;
+    }
+
+    .values .child1 {
+      width: 90%;
+      height: 60vh;
+      position: absolute;
+    }
+
+    .values .child2 {
+      width: 90%;
+    }
+
+    .values ul {
+      font-size: 14px;
+    }
+
+    .values .child2 span {
+      left: 50px;
+      padding: 10px 30px;
+      top: 40%;
+      height: fit-content;
+
+    }
+
+  }
+
+
+  .mission ul {
+    font-family: Poppins;
+    border-radius: 15px;
+    padding-bottom: 30px;
+    font-size: 20px;
+  }
+
+  .mission ul li {
+    text-align: left;
+  }
+
+  .symbol {
+    padding: 0 10px;
+  }
+
+  .intro .intro-text {
+    width: 60%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .intro .intro-text h1 {
+    font-size: 9vh;
+    font-weight: bold;
+    font-family: Josefin Sans;
+    color: white;
+
+  }
+
+  .intro .intro-text h3 {
+    font-size: 16px;
+    font-family: Poppins;
+    margin: 0 auto;
+    width: 50%;
+    color: white;
+    font-weight: 100;
+  }
+
+  .intro-text {
+    opacity: 0;
+    animation: scaleUpAnimation 2s ease-in forwards;
+    animation-delay: .5s;
+  }
+
+  @keyframes scaleUpAnimation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+
+    .mission ul {
+      font-size: 15px;
+    }
+
+    .intro .intro-text {
+      width: 80%;
+    }
+
+    .intro .intro-text h1 {
+      font-size: 6vh;
+      font-weight: bold;
+
+      font-family: Josefin Sans;
+      color: white;
+
+    }
+
+    .intro .intro-text h3 {
+      font-size: 12px;
+      width: 80%;
+    }
+  }
+</style>
+
+
+<div class="home-page">
+  <div class="intro">
+    <span class="layer"></span>
+    <span class="intro-text">
+      <h1>Starting your first year at IIT Madras!</h1>
+      <h3>This website is your one-stop platform for all things IIT Madras.
+        Stay connected and informed with easy access to information about events,
+        competitions, teams, clubs, sports, academics, and more.
+      </h3>
+    </span>
+    <div class="ScrollDown_box">
+      <a class="btn_ScrollDown" href="#panel">
+        <fish></fish><span></span><span></span>
+      </a>
+    </div>
+
+    <video autoplay muted loop>
+      <source src="/video.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+  <div class="explore">
+    <section class="carousel">
+      <div class="carousel__container">
+
+        <div class="carousel-item">
+          <div class="carousel-item__details">
+            <div class="img-box">
+              <img src="/img.jpg">
+              <span class="shadow"></span>
+            </div>
+            <div class="text-box">
+              <h5>News</h5>
+              <h1  id="panel">Get Ready for Your<br>First Year in<br>2023</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-item__details">
+            <div class="img-box">
+              <img src="/img.jpg">
+              <span class="shadow"></span>
+            </div>
+            <div class="text-box">
+              <h5>News</h5>
+              <h1>Get Ready for Your<br>First Year in<br>2023</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-item__details">
+            <div class="img-box">
+              <img src="/img.jpg">
+              <span class="shadow"></span>
+            </div>
+            <div class="text-box">
+              <h5>News</h5>
+              <h1>Get Ready for Your<br>First Year in<br>2023</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-item__details">
+            <div class="img-box">
+              <img src="/img.jpg">
+              <span class="shadow"></span>
+            </div>
+            <div class="text-box">
+              <h5>News</h5>
+              <h1>Get Ready for Your<br>First Year in<br>2023</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-item__details">
+            <div class="img-box">
+              <img src="/img.jpg">
+              <span class="shadow"></span>
+            </div>
+            <div class="text-box">
+              <h5>News</h5>
+              <h1>Get Ready for Your<br>First Year in<br>2023</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-item__details">
+            <div class="img-box">
+              <img src="/img.jpg">
+              <span class="shadow"></span>
+            </div>
+            <div class="text-box">
+              <h5>News</h5>
+              <h1>Get Ready for Your<br>First Year in<br>2023</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-item__details">
+            <div class="img-box">
+              <img src="/img.jpg">
+              <span class="shadow"></span>
+            </div>
+            <div class="text-box">
+              <h5>News</h5>
+              <h1>Get Ready for<br>Starting Harry<br>Potter in 2023</h1>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+  </div>
+
+
+
+  <div class="message">
+    <a href="#show" class="show btn" id="show">Read more</a>
+    <a href="#hide" class="hide btn" id="hide">Collapse</a>
+    <div class="panel">
+      <span class="section-one__first--letter">Dear Freshies,</span><br>
+      Congratulations on making it into one of the world's most prestigious educational institutions! Your hard work,
+      sleepless nights, and endless dedication have led you to this exciting phase of your life. Just like those who
+      have come before you, there may be uncertainties and challenges along the way, but rest assured, it will be a
+      beautiful journey.<br>
+      Here at IIT Madras, we believe in providing a holistic educational experience that encompasses academics, sports,
+      and cultural activities. We offer a multitude of opportunities for you to explore your true interests and
+      passions. Through various events and programs, we aim not only to bring out your hidden talents but also to
+      develop your organizational and leadership skills.<br>
+      Moreover, IIT Madras creates an environment that encourages personal growth and excellence in every aspect of
+      life. Your experiences and outcomes may vary based on the decisions you make, but in the end, the overall picture
+      will always be a beautiful one.<br>
+      Welcome to our family at IIT Madras! We are thrilled to have you join us on this remarkable journey of
+      self-discovery and achievement.
+      <br><br>
+      Welcome to the family!<br>
+      <br><i>Ajay Singh Sitole <br>
+        Students General Secretary</i><br>
+    </div>
+  </div>
+
+  <hr>
+
+
+  <span class="title">Core Values</span>
+  <div class="values">
+    <div class="child1">
+      <img src="/img.jpg" alt="Image">
+    </div>
+    <div class="child2">
+      <span>
+        <h4>About</h4>
+        <h1>In pursuit of its mission IITM will-</h1>
+        <ul>
+          <li> Develop human resources to serve the nation</li>
+          <li> Recognize teaching as a unifying activity</li>
+          <li> Nurture integrity, creativity, and academic freedom</li>
+          <li> Retain a willingness to experiment with new paradigms</li>
+        </ul>
+      </span>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="mission">
+    <span class="title">Missions</span>
+    <ul>
+
+      <li>To create and sustain a community of learning in which students
+        acquire knowledge and learn to apply it professionally with due conside
+        ation for ethical, ecological, and economic issues.</li>
+
+      <li>To pursue research and disseminate research findings.</li>
+
+      <li>To provide knowledge-based technological services to satisfy the needs
+        of society and the industry.</li>
+
+      <li>To help in building national capabilities in science, technology, humanities, management, education and
+        research.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="vision">
+    <span class="title">Vision</span>
+    <p>To be an academic institution in
+      dynamic equilibrium with its
+      social, ecological, and economic
+      environment striving continuously
+      for excellence in the fields of
+      education, research and
+      technological service to the
+      nation.
+    </p>
+  </div>
+
+</div>
+
+
+
+
+<style>
+  * {
+    scroll-snap-type: x mandatory;
+  }
+
+  .explore {
+    margin: 0 auto;
+    color: white;
+    padding: 20px 0;
+    background: #10141B;
+    background-image: linear-gradient(#10141B, rgb(0, 0, 0, .5));
+
+  }
+
+  .carousel {
+    width: 75.8%;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .carousel__container {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .carousel__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    width: 350px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 300px;
+    margin-right: 45px;
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .img-box {
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .img-box img {
+    width: 100%;
+  }
+
+  .img-box .shadow {
+    position: absolute;
+    display: block;
+    background-image: linear-gradient(transparent 10%, rgb(0, 0, 0, .5));
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+  }
+
+  .carousel-item__details {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    bottom: 0;
+    text-align: center;
+
+  }
+
+  .text-box {
+    position: absolute;
+    width: 85%;
+    text-align: left;
+    left: 15%;
+    top: 30%;
+  }
+
+  .text-box h5 {
+    font-size: 12px;
+    font-family: MuseoModerno;
+  }
+
+  .text-box h1 {
+    font-size: 32px;
+    position: relative;
+    width: 50%;
+    font-family: Josefin Sans;
+  }
+
+
+  @media only screen and (max-width: 900px) {
+
+    .carousel {
+      width: 90%;
+    }
+
+    .carousel-item {
+      margin-right: 10px;
+    }
+  }
+</style>

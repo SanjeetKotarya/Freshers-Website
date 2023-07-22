@@ -1,0 +1,128 @@
+<style>
+  .page-intro .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .page-intro .layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(16, 20, 27, 0.7), transparent);
+  }
+
+  .page-intro {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 70vh;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .page-intro {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      min-height: 30vh;
+      position: relative;
+      justify-content: center;
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      text-align: center;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+  }
+</style>
+
+
+<style>
+  .help .faq {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: auto;
+    padding: 10px 30px;
+    margin: 20px auto;
+    border: 1px solid #c6c6c6;
+    background-color: #FFF;
+    list-style: none;
+    border-radius: 25px;
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+    cursor: pointer;
+  }
+
+  .question{
+    position: relative;
+    padding: 10px;
+    display: block;
+    margin: 0 auto 15px auto;
+    transition: .3s ease-in;
+    
+  }
+  .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Add a transition for smooth animation */
+}
+
+.active{
+  max-height: 500px; /* Set the desired maximum height for the answer */
+}
+
+</style>
+
+
+<div class="help">
+
+  <div class="page-intro">
+    <span class="layer"></span>
+    <span>Starting Harry Potter for the first time? Check out the first chapter</span>
+  </div>
+
+
+  <div class="faq">
+    <div class="ques">DESCRIPTION</div>
+    <div class="answer">
+      <h5>
+        <p>Kena: Bridge of Spirits Torrent Download is an action-adventure game that follows the protagonist, a young
+          girl Kena.</p>
+      </h5>
+    </div>
+    
+
+
+  </div>
+
+
+</div>
+<script>
+var questions = document.querySelectorAll(".question");
+
+questions.forEach(function (question) {
+  question.addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+});
+
+  </script>
