@@ -29,6 +29,28 @@
     margin: 0 auto;
   }
 
+ .nav-first .first span{
+    position: absolute;
+    top: 30px;
+    width: 80px;
+    text-align: center;
+    display: block;
+    background: #6B63B5;
+    font-size: 13px;
+    right: 20px;
+    font-weight: bold;
+    padding: 10px 0 8px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: .2s ease-in;
+  }
+  .nav-first .first span:hover{
+    background: #514A92;
+  }
+    .nav-first .first span a{
+    color:white;
+  }
+  
   .nav-first .second{
     color: white;
     text-align: center;
@@ -124,7 +146,7 @@
     height: 25px;
     display: none;
     top: 40px;
-    left: 30px;
+    left: 20px;
     position: fixed;
     flex-direction: column;
     justify-content: space-between;
@@ -172,6 +194,9 @@
     .nav-first .second{
       display: none;
     }
+  .nav-first .first span{
+    top: 40px;
+  }
     .nav-first .first{
       background-color: transparent;
     }
@@ -220,7 +245,6 @@
       <li><a href="#" onclick="changeContent('Home/home.html'); toggleMenu()">STUDENT GOVERNANCE</a></li>
       <li><a href="#" onclick="changeContent('Home/home.html'); toggleMenu()">SURVIVAL</a></li>
       <li><a href="#" onclick="changeContent('Home/home.html'); toggleMenu()">CLUBS & TEAMS</a></li>
-      <li><a href="#" onclick="changeContent('Help/help.html'); toggleMenu()">HELP</a></li>
     </ul>
   </div>
 </div>
@@ -229,7 +253,7 @@
   <div class="nav">
     <div class="first">
     <a href="#"><img src="logo.png"></a>
-    <i></i>
+    <span><a href="#" onclick="changeContent('Help/help.html')">HELP</a></span>
   </div>
   <div class="second">
     <ul>
@@ -240,7 +264,6 @@
       <li><a href="#" onclick="changeContent('Home/home.html')">STUDENT GOVERNANCE</a></li>
       <li><a href="#" onclick="changeContent('Home/home.html')">SURVIVAL</a></li>
       <li><a href="#" onclick="changeContent('Home/home.html')">CLUBS & TEAMS</a></li>
-      <li><a href="#" onclick="changeContent('Help/help.html')">HELP</a></li>
     </ul>
   </div>
   </div>
