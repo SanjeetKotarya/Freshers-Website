@@ -419,7 +419,7 @@
 
   .intro .intro-text {
     width: 60%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
   }
 
   .intro .intro-text h1 {
@@ -434,15 +434,20 @@
     font-size: 16px;
     font-family: Poppins;
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
     color: white;
     font-weight: 100;
   }
 
-  .intro-text {
+  .intro-text h1{
     opacity: 0;
     animation: scaleUpAnimation 2s ease-in forwards;
-    animation-delay: .5s;
+    animation-delay: 1s;
+  }
+  .intro-text h3{
+    opacity: 0;
+    animation: scaleUpAnimation 2s ease-in forwards;
+    animation-delay: 2.5s;
   }
 
   @keyframes scaleUpAnimation {
@@ -467,17 +472,16 @@
     }
 
     .intro .intro-text h1 {
-      font-size: 6vh;
+      font-size: 7vh;
       font-weight: bold;
-
       font-family: Josefin Sans;
       color: white;
 
     }
 
     .intro .intro-text h3 {
-      font-size: 12px;
-      width: 80%;
+      font-size: 14px;
+      width: 90%;
     }
   }
 </style>
@@ -487,7 +491,7 @@
   <div class="intro">
     <span class="layer"></span>
     <span class="intro-text">
-      <h1>Starting your first year at IIT Madras!</h1>
+      <h1>Welcome to IIT Madras!</h1>
       <h3>This website is your one-stop platform for all things IIT Madras.
         Stay connected and informed with easy access to information about events,
         competitions, teams, clubs, sports, academics, and more.
