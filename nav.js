@@ -35,29 +35,34 @@ function changeContent(pageUrl) {
 }
 
 
-// Get the menu bar element
-const menuBar = document.getElementsByClassName(".nav-first");
 
-// Variable to store the previous scroll position
-let prevScrollPos = window.pageYOffset;
 
-// Function to handle the scroll event
-function handleScroll() {
-  const currentScrollPos = window.pageYOffset;
+//STUDENT GOVERNANCE
+function openTab(tabId) {
+  const tabContents = document.querySelectorAll('.tabcontent');
+  tabContents.forEach(tab => tab.classList.remove('active-tab'));
 
-  if (prevScrollPos > currentScrollPos) {
-    // Scrolling up
-    menuBar.classList.remove("menu-hidden");
-  } else {
-    // Scrolling down
-    menuBar.classList.add("menu-hidden");
-  }
+  const selectedTabContent = document.getElementById(tabId);
+  selectedTabContent.classList.add('active-tab');
 
-  prevScrollPos = currentScrollPos;
+  const tabLinks = document.querySelectorAll('.tablinks');
+  tabLinks.forEach(link => link.classList.remove('active-link'));
+
+  const selectedTabLink = document.querySelector(`[data-tab="${tabId}"]`);
+  selectedTabLink.classList.add('active-link');
 }
 
-// Event listener for the scroll event
-window.addEventListener("scroll", handleScroll);
+// Event listeners for tab links
+document.querySelectorAll('.tablinks').forEach(link => {
+  link.addEventListener('click', () => {
+      const tabId = link.getAttribute('data-tab');
+      openTab(tabId);
+  });
+});
 
+// Open the default tab on page load
+openTab('slc');
+openTab('dep');
 
+//STUDENT GOVERNANCE End
 
