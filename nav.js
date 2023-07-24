@@ -66,3 +66,14 @@ openTab('dep');
 
 //STUDENT GOVERNANCE End
 
+// HELP PAGE
+function toggleAnswerVisibility(parent) {
+  const answer = parent.querySelector('.answer');
+  if (answer.style.height === '0px' || answer.style.height === '') {
+      answer.style.height = 'auto';
+  } else {
+      answer.style.height = '0px';
+  }
+}
+// HELP PAGE END
+
