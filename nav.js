@@ -66,6 +66,9 @@ openTab('dep');
 
 //STUDENT GOVERNANCE End
 
+
+
+
 // HELP PAGE
 // Function to handle search in FAQ
 function searchFAQ() {
@@ -88,6 +91,10 @@ function toggleAnswerVisibility(parent) {
       answer.style.height = '0px';
   }
 }
+function toggleQuestion(questionElement) {
+  questionElement.classList.toggle('open');
+}
+
 
 // HELP PAGE END
 
