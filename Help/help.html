@@ -245,7 +245,7 @@
         text-align: left;
         width: 100%;
     }
-    
+
     .question h3 {
         color: black;
         margin-bottom: 10px;
@@ -371,13 +371,21 @@
     }
     
     .question h3::after {
-        content: '\25B2'; /* Up-arrow icon (Unicode character) */
+        content: '\002B'; /* Up-arrow icon (Unicode character) */
         position: absolute;
         top: 40%;
         right: 0;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 5px;
+        background-color: black;
         transform: translateY(-50%);
-        font-size: 18px;
-        color: black;
+        font-size: 20px;
+        border-radius: 100%;
+        color: white;
     }
     
     /* Add the following styles to rotate the arrow when the question div is clicked */
