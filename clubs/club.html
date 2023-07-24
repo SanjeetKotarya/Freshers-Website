@@ -276,10 +276,29 @@
         </div>
 
         <hr>
-        <span class="title">IITM TV</span>
-        <hr>
-
-
+        <div class="iitmtv">
+            <div class="img-box">
+                <img src="govern1.jpg">
+            </div>
+            <span>
+                <h1>IITM TV</h1>
+                <p>The official student Media body of IIT Madras, we, 
+                    in IITM TV, cover a wide spectrum ranging from vox-rox 
+                    to music videos, satires and short films. In short, we 
+                    document, curate and preserve memories. Writing, Direction, 
+                    Cinematography, Editing, Sound Design - everything everywhere
+                     all at once - is iitm tv. The flexible work culture here allows
+                      every team member to explore, learn and execute, not just 
+                      in their own vertical, but in other areas of interest as 
+                      well. Being in top 30 for the Asia's biggest filmfest; IFP 
+                      50 hour filmmaking challenge and having crossed 1 million 
+                      views for a video in about a month, we work to produce better 
+                      content with a bunch of self driven creators - with creativity 
+                      in our minds and passion in our hearts.
+                    </p>
+            </span>
+        
+        </div>
 
         <hr>
         <span class="title">Independent Bodies</span>
@@ -287,6 +306,7 @@
 
         <p>Campus regional clubs host cultural events, meals, and gatherings. Open to students, faculty, and staff. Great for making friends, easing homesickness. Look for event notices.
         </p>
+        
         <div id="card-area">
             <div class="wrapper">
                 <div class="box-area">
@@ -406,15 +426,12 @@
             </div>
         </div>
 
-
-
     </div>
 </div>
 
-
-
-
 <style>
+
+
 
 .page-body p{
         font-family: Poppins;
@@ -464,7 +481,6 @@
 	position: absolute;
 	left: 0;
     background: linear-gradient(transparent,#10141B 60%);
-
     z-index: 3;
     bottom:0;
 	overflow: hidden;
@@ -498,11 +514,6 @@
 .box:hover .overlay {
     max-height: 500px;
 }
-
-
-
-
-
 
     .page-body {
         color: white;
@@ -632,4 +643,93 @@
             font-size: 35px;
         }
     }
+
+
+    .iitmtv{
+    width: 100%;
+    position: relative;
+    height: 450px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.iitmtv .img-box{
+    position: absolute;
+    left: 40px;
+    overflow: hidden;
+    height:100% ;
+    width: 60%;
+}
+.iitmtv .img-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent, rgba(16, 20, 27, .9) 80%);
+  }
+  .iitmtv span {
+    position: absolute;
+    width: auto;
+    height: 100%;
+  }
+
+  .iitmtv span h1{
+    text-align: left;
+    font-size:60px;
+    font-family: Josefin Sans;
+    font-weight: bold;
+
+  }
+
+.iitmtv span p{
+    width: 80%;
+    text-align: left;
+    font-size: 18px;
+    margin-left: 0;
+    font-family: Poppins;
+}
+
+@media only screen and (max-width: 900px) {
+    .iitmtv{
+    height: fit-content;
+}
+.iitmtv .img-box{
+    position: relative;
+    overflow: hidden;
+    height:250px;
+    width: 100%;
+}
+.iitmtv .img-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, transparent, rgba(16, 20, 27, .9) 80%);
+  }
+
+  .iitmtv span {
+    position: relative;
+    width: 100%;
+    text-align: right;
+    height: fit-content;
+  }
+
+  .iitmtv span h1{
+    text-align: right;
+    font-size:40px;
+    padding-right: 10px;
+  }
+  .iitmtv span p{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 10px;
+    text-align: right;
+    margin-right: 0;
+    font-size:15px;
+  }
+}
 </style>
