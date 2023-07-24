@@ -145,9 +145,13 @@
     <div class="page-intro">
         <span class="layer"></span>
         <div class="intro-text">
-            <h1>FAQ</h1>
+            <h1>Need help?</h1>
             <h3>
-                We understand that as a student, prospective student, or parent, you may have various questions about our college and its offerings. This FAQ page is designed to provide you with quick and comprehensive answers to the most common queries we receive.
+                We are happy to assist 
+                you with any queries, concerns, or challenges you may encounter
+                 during your journey with us. Whether you are a current student,
+                  a prospective applicant, or a parent, we are committed to providing 
+                  you with the support and guidance you need.
 
             </h3>
         </div>
@@ -158,7 +162,7 @@
 <div class="page-body">
 
         
-        
+    <span class="title">FAQs</span>
             <!-- Search Bar -->
             <div class="searcharea">
             <input type="text" id="search" placeholder="Search for a question">
@@ -167,25 +171,25 @@
         
             <!-- FAQ Section -->
             <div id="faq">
-                <div class="question" onclick="toggleAnswerVisibility(this)">
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+                    <h3 >What is the library opening hours?</h3>
+                    <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
+                </div>
+        
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+                    <h3>How can I apply for hostel accommodation?</h3>
+                    <p class="answer">You can apply for hostel accommodation through the student portal.</p>
+                </div>
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
                     <h3>What is the library opening hours?</h3>
                     <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
                 </div>
         
-                <div class="question" onclick="toggleAnswerVisibility(this)">
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
                     <h3>How can I apply for hostel accommodation?</h3>
                     <p class="answer">You can apply for hostel accommodation through the student portal.</p>
                 </div>
-                <div class="question" onclick="toggleAnswerVisibility(this)">
-                    <h3>What is the library opening hours?</h3>
-                    <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
-                </div>
-        
-                <div class="question" onclick="toggleAnswerVisibility(this)">
-                    <h3>How can I apply for hostel accommodation?</h3>
-                    <p class="answer">You can apply for hostel accommodation through the student portal.</p>
-                </div>
-                <div class="question" onclick="toggleAnswerVisibility(this)">
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
                     <h3>What is the library opening hours?</h3>
                     <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
                 </div>
@@ -197,7 +201,7 @@
             </div>
       
             <!-- Email Sending Section -->
-            <span class="title">Contact us</span>
+            <span class="title">Contact Us</span>
             <form id="contactForm" action="mailto:your-sanjeetkotarya@gmail.com" method="post" enctype="text/plain">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required><br>
@@ -252,7 +256,7 @@
     }
     
     .answer{
-        color: #333;
+        color: #6E6E6E;
         height: 0;
         overflow: hidden;
     }
@@ -370,7 +374,7 @@
     }
     
     .question h3::after {
-        content: '\002B'; /* Up-arrow icon (Unicode character) */
+        content: '\002B';
         position: absolute;
         top: 40%;
         right: 0;
@@ -387,10 +391,11 @@
         color: white;
     }
     
-    /* Add the following styles to rotate the arrow when the question div is clicked */
     .question.open h3::after {
-        transform: translateY(-50%) rotate(-180deg);
-    }
+  content: '\2212';
+}
+
+
     
     .question p{
      font-size: 18px;
@@ -415,7 +420,7 @@
         padding:10px 20px;
     }
     .question p{
-     font-size: 12px;
+     font-size: 14px;
     }
     .question h3 {
         font-size: 15px;
