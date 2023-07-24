@@ -1,125 +1,396 @@
 <style>
-  .page-intro .layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/img.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
 
-  .page-intro .layer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(16, 20, 27, 0.7), transparent);
-  }
 
-  .page-intro {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    min-height: 70vh;
-    position: relative;
-    justify-content: center;
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
-    overflow: hidden;
-  }
-
-  @media only screen and (max-width: 900px) {
-    .page-intro {
-      top: 0;
-      left: 0;
-      width: 100vw;
-      min-height: 30vh;
-      position: relative;
-      justify-content: center;
-      display: flex;
-      overflow: hidden;
-      align-items: center;
-      text-align: center;
-      z-index: 2;
-      overflow: hidden;
+    .page-body{
+        margin-top: 40px;
     }
+    .page-body p{
+            font-family: Poppins;
+            font-size: 18px;
+            width: 70%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    
+    
+    
+    
+        hr {
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;    
+        width: 70%;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
+      }
+    
+    
+        .club-page {
+            background-color: #FAF6F0;
+        }
+    
+        .title {
+            font-family: Josefin Sans;
+            display: block;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 40px;
+            margin: 40px 0;
+        }
+    
+        .page-intro .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('govern1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        .page-intro .layer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(transparent 50%, #10141B);
+        }
+    
+        .page-intro {
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height:60vh;
+            position: relative;
+            justify-content: center;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+    
+    
+        .club-page .intro-text {
+            text-align: center;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            padding: 0 auto;
+            display: block;
+            width: 40%;
+            top: 40%;
+            z-index: 2;
+            color: white;
+        }
+    
+    
+        .club-page .intro-text h1 {
+            font-family: Josefin Sans;
+            font-size: 50px;
+        }
+    
+        .club-page .intro-text h3 {
+            font-size: 14px;
+            font-family: Poppins;
+            font-weight: 100;
+            color: white;
+        }
+    
+        @media only screen and (max-width: 900px) {
+            
+    
+            .page-body p{
+            font-size: 15px;
+            width: 90%;
+        }
+            .page-intro {
+            height: 60vh;
+        }
+    
+            .club-page .intro-text {
+                width: 80%;
+                bottom: 10%;
+            }
+    
+            .club-page .intro-text h4 {
+                font-size: 12px;
+            }
+            .club-page .intro-text h1 {
+            font-size: 30px;
+        }
+    
+            .club-page .intro-text h3 {
+                font-size: 14px;
+            }
+    
+            .title {
+                font-size: 35px;
+            }
+        }
+    
+    
+    </style>
 
-  }
-</style>
+<div class="club-page">
+
+
+    <div class="page-intro">
+        <span class="layer"></span>
+        <div class="intro-text">
+            <h1>FAQ</h1>
+            <h3>
+                We understand that as a student, prospective student, or parent, you may have various questions about our college and its offerings. This FAQ page is designed to provide you with quick and comprehensive answers to the most common queries we receive.
+
+            </h3>
+        </div>
+    </div>
+
+
+
+<div class="page-body">
+
+        
+        
+            <!-- Search Bar -->
+            <div class="searcharea">
+            <input type="text" id="search" placeholder="Search for a question">
+            <button onclick="searchFAQ()"> search</button>
+        </div>
+        
+            <!-- FAQ Section -->
+            <div id="faq">
+                <div class="question" onclick="toggleAnswerVisibility(this)">
+                    <h3>What is the library opening hours?</h3>
+                    <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
+                </div>
+        
+                <div class="question" onclick="toggleAnswerVisibility(this)">
+                    <h3>How can I apply for hostel accommodation?</h3>
+                    <p class="answer">You can apply for hostel accommodation through the student portal.</p>
+                </div>
+                <div class="question" onclick="toggleAnswerVisibility(this)">
+                    <h3>What is the library opening hours?</h3>
+                    <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
+                </div>
+        
+                <div class="question" onclick="toggleAnswerVisibility(this)">
+                    <h3>How can I apply for hostel accommodation?</h3>
+                    <p class="answer">You can apply for hostel accommodation through the student portal.</p>
+                </div>
+                <div class="question" onclick="toggleAnswerVisibility(this)">
+                    <h3>What is the library opening hours?</h3>
+                    <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
+                </div>
+        
+
+        
+                <!-- Add more questions and answers here -->
+        
+            </div>
+      
+            <!-- Email Sending Section -->
+            <span class="title">Contact us</span>
+            <form id="contactForm" action="mailto:your-sanjeetkotarya@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required><br>
+        
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required><br>
+        
+                <label for="message">Your Question:</label>
+                <textarea id="message" name="message" required></textarea><br>
+        
+                <button type="submit">Send</button>
+            </form>
+        
+</div>
+
+</div>
+
 
 
 <style>
-  .help .faq {
-    position: relative;
-    display: block;
-    width: 50%;
-    height: auto;
-    padding: 10px 30px;
-    margin: 20px auto;
-    border: 1px solid #c6c6c6;
-    background-color: #FFF;
-    list-style: none;
-    border-radius: 25px;
-    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
-    cursor: pointer;
-  }
+ .searcharea{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 40px;
+ }
 
-  .question{
-    position: relative;
-    padding: 10px;
-    display: block;
-    margin: 0 auto 15px auto;
-    transition: .3s ease-in;
+    #faq {
+        margin: 50px auto;
+        margin-top: 20px;
+        width: 60%;
+    }
+
+    .question {
+        border: 1px solid #ddd;
+        border-radius: 35px;
+        width: 100%;
+        cursor: pointer;
+        background-color: white;
+        padding: 5px 15px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
     
-  }
-  .answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease; /* Add a transition for smooth animation */
-}
+    .question h3 {
+        color: black;
+        margin-bottom: 10px;
+    }
+    
+    .answer{
+        color: #333;
+        height: 0;
+        overflow: hidden;
+    }
 
-.active{
-  max-height: 500px; /* Set the desired maximum height for the answer */
-}
-
-</style>
-
-
-<div class="help">
-
-  <div class="page-intro">
-    <span class="layer"></span>
-    <span>This will be the faq page plus other links.</span>
-  </div>
-
-
-  <div class="faq">
-    <div class="ques">DESCRIPTION</div>
-    <div class="answer">
-
-    </div>
+    #contactForm {
+        margin-top: 30px;
+        border: 1px solid #ddd;
+        width: 60%;
+        font-family: Poppins;
+        position: relative;
+        display: block;
+        align-items: center;
+        margin: 50px auto;
+        justify-content: center;
+        border-radius: 1.5rem;
+        padding: 25px 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #contactForm label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
     
 
+    #contactForm textarea:focus {
+        outline: none;
+        border-color: #514A92;
+    }
 
-  </div>
+    #contactForm input:focus {
+        outline: none;
+        border-color: #514A92;
+    }
+    
+
+    #contactForm textarea {
+        resize: vertical;
+    }
+    
+    #contactForm button {
+        background-color: #6B63B5;
+        color: #fff;
+        border: none;
+        border-radius: 35px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    #contactForm button:hover {
+        background-color: #514A92;
+    }
+   
+    
+    
+    /* Your existing styles go here */
+    
+    /* Add the following styles for the search bar */
+    button{
+        width: 10%;
+        border-radius: 35px;
+        background-color: #6B63B5;
+        color: white;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        justify-content: center;
+        font-family: Josefin Sans;
+    }
+    button:hover{
+        background-color: #514A92;
+    }
 
 
-</div>
-<script>
-var questions = document.querySelectorAll(".question");
 
-questions.forEach(function (question) {
-  question.addEventListener("click", function () {
-    this.classList.toggle("active");
-  });
-});
+    #search {
+        width: 50%;
+        border-radius: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 35px;
+        padding: 20px;
+        font-family: Poppins;
+        font-size: 14px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    #button:hover{
+        background-color: #514A92;
+    }
 
-  </script>
+    #search:focus {
+        outline: none;
+        border-color: #514A92;
+    }
+
+    
+    /* Your existing styles go here */
+    
+    /* Add the following styles for the up-arrow icon */
+    .question h3 {
+        position: relative;
+        font-family: Poppins;
+        font-weight: 100;
+        padding-right: 20px;
+    }
+    
+    .question h3::after {
+        content: '\25B2'; /* Up-arrow icon (Unicode character) */
+        position: absolute;
+        top: 40%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: black;
+    }
+    
+    /* Add the following styles to rotate the arrow when the question div is clicked */
+    .question.open h3::after {
+        transform: translateY(-50%) rotate(-180deg);
+    }
+    
+    
+    
+    /* Media Query for Responsiveness */
+    @media (max-width: 768px) {
+        .question,
+        #contactForm {
+            width: 100%;
+        }
+    }
+    
+    
+    </style>
+
