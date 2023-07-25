@@ -40,7 +40,8 @@
     <div class="organ">
       <span class="title">Legislative body</span>
 
-      <p>The Legislative body comprises the Student Legislative Council (SLC), the Executive Council,
+      <p>The Student Governance at IIT Madras has a legislative body.
+        It comprises the Student Legislative Council (SLC), the Executive Council,
         and the Student Ethics and Constitution Council.</p>
 
       <div class="organs">
@@ -52,7 +53,7 @@
             <div class="links">
               <h4 class="tablinks active-link" data-tab="slc" onclick="openTab('slc')">SLC</h4>
               <h4 class="tablinks" data-tab="execute" onclick="openTab('execute')">Executive</h4>
-              <h4 class="tablinks" data-tab="sec" onclick="openTab('sec')">Student Ethics & Constitution</h4>
+              <h4 class="tablinks" data-tab="sec" onclick="openTab('sec')">Student Ethics and Constitution</h4>
             </div>
 
             <div class="tabcontent active-tab" id="slc">
@@ -175,6 +176,7 @@
     position: relative;
     font-family: Josefin Sans;
     width: fit-content;
+    margin-right: 10px;
     color: #9FA1AD;
   }
 
@@ -198,37 +200,58 @@
 
   .tabcontent {
     display: none;
-    height: 90%;
+    height: 80%;
     overflow-y: scroll;
   }
   .tabcontent::-webkit-scrollbar {
     display: none;
   }
+
+
   .tabcontent.active-tab {
     display: block;
   }
 
   .organs {
     width: 80%;
-    height: 75vh;
+    height: 55vh;
     justify-content: space-between;
     position: relative;
     display: flex;
     margin: 50px auto;
+    padding-bottom: 50px;
+  }
 
+  .organs .child1 {
+    width: 39%;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+
+  }
+
+  .organs .child2{
+    width: 60%;
+    position: absolute;
+right: 0;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
   }
 
   .child2 .links {
     display: flex;
     justify-content: space-between;
-
+    margin-bottom: 20px;
   }
+
 
   .organs .tabcontent {
     font-family: Poppins;
     color: white;
-    text-align:justify;
-    font-size: 16px;
+    font-size: 18px;
+    text-align: justify;
   }
 
 
@@ -237,40 +260,28 @@
   }
 
 
-  .organs .child1 {
-    width: 100%;
-    text-align: right;
-    overflow: hidden;
-  }
+
 
   .organs .child1 img {
-    position: relative;
-    width: 100%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+
   }
 
   .organs .child2 span {
     position: absolute;
     background-color: #242633;
-    padding: 50px 80px;
+    padding:20px 30px;
     width: 100%;
-    height: 100%;
-    max-height: 700px;
-    box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
-    left: -50px;
-    top: 30px;
+  height: 100%;
+    box-shadow: -36px -30px 16px -15px rgba(0,0,0,0.1);    
+
   }
 
-  .organs .child2 span::-webkit-scrollbar {
-    display: none;
-  }
-
-  .organs .child2 {
-    width: 100%;
-    height: 100%;
-    color: white;
-    text-align: left;
-    position: relative;
-  }
 
 
   @media only screen and (max-width: 900px) {
@@ -278,29 +289,37 @@
       width: 100%;
       display: block;
       margin-bottom: 50px;
+      height: auto;
+      min-height: 200px;
     }
 
     .organs .child1 {
-      width: 90%;
-      height: 60vh;
-      position: absolute;
+      width: 100%;
+      height: 300px;
+      position: relative;
+      border-radius: 0;
+      margin: 0 auto;
+      left: 0;
+
     }
 
     .organs .child2 {
+      position: relative;
       width: 100%;
+      height: 400px;
+      margin: 0 auto;
+      border-radius: 0;
     }
 
     .organs .tabcontent {
       font-size: 14px;
-      height:75%
     }
 
     .organs .child2 span {
-      top: 30%;
-      height: 350px;
       left: 0;
-      padding: 10px 20px;
+      padding: 10px 30px;
       width: 100%;
+      height: 100%;
 
     }
 
@@ -344,7 +363,6 @@
       background-position: 100% 100%;
     }
   }
-  
 
   hr {
     margin: 0 auto;
@@ -356,7 +374,7 @@
   }
 
   .paragraph {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
 
   }
@@ -381,7 +399,7 @@
   .about p {
     font-family: Poppins;
     font-size: 18px;
-    width: 85%;
+    width: 80%;
     color: black;
     text-align: justify;
     margin: 0 auto;
@@ -469,33 +487,33 @@
 
   @media only screen and (max-width: 900px) {
 
-      .paragraph p {
-    font-size: 17px;
-  }
-    .about p {
-      font-size:15px;
-    }
-        .organ p {
-      font-size:15px;
-    }
-    .page-intro {
-      height: 60vh;
-    }
+.paragraph p {
+font-size: 17px;
+}
+.about p {
+font-size:15px;
+}
+  .organ p {
+font-size:15px;
+}
+.page-intro {
+height: 60vh;
+}
 
-    .govern-page .intro-text h4 {
-      font-size: 14px;
-    }
+.govern-page .intro-text h4 {
+font-size: 14px;
+}
 
-    .govern-page .intro-text h1 {
-      font-size: 28px;
-    }
+.govern-page .intro-text h1 {
+font-size: 25px;
+}
 
-    .govern-page .intro-text h3 {
-      font-size: 16px;
-    }
+.govern-page .intro-text h3 {
+font-size: 16px;
+}
 
-    .title {
-      font-size: 32px;
-    }
-  }
+.title {
+font-size: 35px;
+}
+}
 </style>
