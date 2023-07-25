@@ -1,145 +1,146 @@
 <style>
-    .page-body p{
-            font-family: Poppins;
-            font-size: 18px;
-            width: 70%;
-            text-align: center;
-            margin: 0 auto;
-        }
-    
-        .page-body {
-            color: white;
-            height: fit-content;
-        }
-    
-        hr {
+    .page-body p {
+        font-family: Poppins;
+        font-size: 18px;
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .page-body {
+        color: white;
+        height: fit-content;
+    }
+
+    hr {
         margin: 0 auto;
         margin-top: 50px;
-        margin-bottom: 50px;    
-        width: 80%;
+        margin-bottom: 50px;
+        width: 70%;
         border: 0;
         height: 1px;
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-      }
-    
-    
-        .club-page {
-            background-color: #10141B;
-            border: solid #10141B 1px;
-        }
-    
-        .title {
-            font-family: Josefin Sans;
-            display: block;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            font-size: 40px;
-            margin: 40px 0;
-        }
-    
-        .page-intro .layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('img/events.jpeg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    
-        .page-intro .layer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(transparent 10%, #10141B);
-        }
-    
-        .page-intro {
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-            justify-content: center;
-            display: flex;
-            overflow: hidden;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-        }
-    
-    
-        .club-page .intro-text {
-            text-align: center;
-            position: absolute;
-            align-items: center;
-            justify-content: center;
-            padding: 0 auto;
-            display: block;
-            width: 40%;
-            top: 40%;
-            z-index: 2;
-            color: white;
-        }
-    
-        .club-page .intro-text h4 {
-            font-size: 14px;
-            font-family: MuseoModerno;
-        }
-    
-        .club-page .intro-text h1 {
-            font-family: Josefin Sans;
-            font-size: 50px;
-        }
-    
-        .club-page .intro-text h3 {
-            font-size: 14px;
-            font-family: Poppins;
-            font-weight: 100;
-            color: white;
-        }
-    
-        @media only screen and (max-width: 900px) {
-            
-    
-            .page-body p{
+    }
+
+
+    .club-page {
+        background-color: #10141B;
+        border: solid #10141B 1px;
+    }
+
+    .title {
+        font-family: Josefin Sans;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 40px;
+        margin: 40px 0;
+    }
+
+    .page-intro .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('img/events.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .page-intro .layer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(transparent 10%, #10141B);
+    }
+
+    .page-intro {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        justify-content: center;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+
+    .club-page .intro-text {
+        text-align: center;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        padding: 0 auto;
+        display: block;
+        width: 40%;
+        top: 40%;
+        z-index: 2;
+        color: white;
+    }
+
+    .club-page .intro-text h4 {
+        font-size: 14px;
+        font-family: MuseoModerno;
+    }
+
+    .club-page .intro-text h1 {
+        font-family: Josefin Sans;
+        font-size: 50px;
+    }
+
+    .club-page .intro-text h3 {
+        font-size: 14px;
+        font-family: Poppins;
+        font-weight: 100;
+        color: white;
+    }
+
+    @media only screen and (max-width: 900px) {
+
+
+        .page-body p {
             font-size: 15px;
             width: 90%;
         }
-            .page-intro {
+
+        .page-intro {
             height: 60vh;
         }
-    
-            .club-page .intro-text {
-                width: 80%;
-                top: 30%;
-            }
-    
-            .club-page .intro-text h4 {
-                font-size: 12px;
-            }
-            .club-page .intro-text h1 {
+
+        .club-page .intro-text {
+            width: 80%;
+            top: 30%;
+        }
+
+        .club-page .intro-text h4 {
+            font-size: 12px;
+        }
+
+        .club-page .intro-text h1 {
             font-size: 30px;
         }
-    
-            .club-page .intro-text h3 {
-                font-size: 14px;
-            }
-    
-            .title {
-                font-size: 35px;
-            }
+
+        .club-page .intro-text h3 {
+            font-size: 14px;
         }
-    
-    </style>
-    
+
+        .title {
+            font-size: 35px;
+        }
+    }
+</style>
+
 
 <div class="club-page">
 
@@ -149,8 +150,10 @@
         <div class="intro-text">
             <h4>Discover IIT Madras</h4>
             <h1>Events & Competitions</h1>
-            <h3>At IITM, 
-                we believe in nurturing talent, fostering creativity, and 
+            <h3>This page is your gateway to a plethora of exciting,
+                engaging, and enriching experiences that take place
+                throughout the year on our campus. At IITM,
+                we believe in nurturing talent, fostering creativity, and
                 encouraging a spirit of healthy competition among our students.</h3>
         </div>
     </div>
@@ -167,33 +170,43 @@
             <span>
                 <h1>Saarang</h1>
                 <p>
-                One of the largest cultural festivals in India, Saarang attracts over 50,000 people from around the country. 
-                Held in January every year, Saarang is commonly acknowledged as the mother of all cultural festivals, a reputation that the Institute is honour-bound to uphold. 
-                This five-day festival is the traditional meeting place for the young and the young at heart.  
-                <br>The mainstay of Saarang has always been the five professional shows. Past editions have seen performances by prominent classical artists such as Balamurli Krishna, Ustad Bismillah Khan and Pandit Hariprasad Chaurasia, as well as international bands such as Opeth, Anathema, Architects and Skidrow. 
-                <br>Saarang has also played host to light music shows by Shaan, KK, Benny Dayal, Udit Narayan, Sonu Nigam, Sunidhi Chauhan and Vishal-Shekhar.
+                    One of the largest cultural festivals in India, Saarang attracts over 50,000 people from around the
+                    country.
+                    Held in January every year, Saarang is commonly acknowledged as the mother of all cultural
+                    festivals, a reputation that the Institute is honour-bound to uphold.
+                    This five-day festival is the traditional meeting place for the young and the young at heart.
+                    <br>The mainstay of Saarang has always been the five professional shows. Past editions have seen
+                    performances by prominent classical artists such as Balamurli Krishna, Ustad Bismillah Khan and
+                    Pandit Hariprasad Chaurasia, as well as international bands such as Opeth, Anathema, Architects and
+                    Skidrow.
+                    <br>Saarang has also played host to light music shows by Shaan, KK, Benny Dayal, Udit Narayan, Sonu
+                    Nigam, Sunidhi Chauhan and Vishal-Shekhar.
                 </p>
             </span>
-        
+
         </div>
+
+<hr>
 
         <div class="type2">
             <span>
                 <h1>Sangam</h1>
                 <p>
-                    Sangam serves as the conglomeration of all cultural 
-                    clubs at the Institute, making it one of the largest 
-                    student-run teams in the Institute. Sangam houses within 
+                    Sangam serves as the conglomeration of all cultural
+                    clubs at the Institute, making it one of the largest
+                    student-run teams in the Institute. Sangam houses within
                     it 16 different clubs, each catering to a unique and a niche
-                     art form and audience. Together these clubs redefine the 
-                     cultural landscape of IIT Madras.
+                    art form and audience. Together these clubs redefine the
+                    cultural landscape of IIT Madras.
                 </p>
             </span>
             <div class="img-box">
                 <img src="img/sangam.png">
             </div>
-        
+
         </div>
+
+        <hr>
 
         <div class="type1">
             <div class="img-box">
@@ -202,33 +215,46 @@
             <span>
                 <h1>Shaastra</h1>
                 <p>
-                    Shaastra—the Sanskrit word for science—is a celebration of free thought and a devotion to the engineering spirit. It offers the chance to get a glimpse of the most cutting-edge technology that is currently popular all over the world.
-                    <br>For the organizers and participants from various technical, scientific, and management backgrounds, Shaastra has always been a very beneficial learning experience.                  
-                    <br>Intense competitions, lectures, and a variety of educational courses provided by Shaastra provide a stage for participants to demonstrate their knowledge and enthusiasm. Watch out for competitions that put contestants' mettle to the absolute limit, such as Fire and Ice, Shaastra Junior Quiz, RoboWars, BrandWars, Hackathons, and others.
-            </p>
+                    Shaastra—the Sanskrit word for science—is a celebration of free thought and a devotion to the
+                    engineering spirit. It offers the chance to get a glimpse of the most cutting-edge technology that
+                    is currently popular all over the world.
+                    <br>For the organizers and participants from various technical, scientific, and management
+                    backgrounds, Shaastra has always been a very beneficial learning experience.
+                    <br>Intense competitions, lectures, and a variety of educational courses provided by Shaastra
+                    provide a stage for participants to demonstrate their knowledge and enthusiasm. Watch out for
+                    competitions that put contestants' mettle to the absolute limit, such as Fire and Ice, Shaastra
+                    Junior Quiz, RoboWars, BrandWars, Hackathons, and others.
+                </p>
             </span>
-        
+
         </div>
+
+        <hr>
 
         <div class="type2">
             <span>
                 <h1>Extra<br>Mural Lectures</h1>
                 <p>
-                    As a child, we admire; as adolescents, we aspire; as adults we perspire; and as responsible, successful citizens, we inspire. It is this inspiration that one gets in these lectures.
+                    As a child, we admire; as adolescents, we aspire; as adults we perspire; and as responsible,
+                    successful citizens, we inspire. It is this inspiration that one gets in these lectures.
 
-                    One cannot achieve big without listening to people who have done it before. It is as they say; we shall not live long enough to learn from our own mistakes. We shall have to learn from others’ too.
-                    
-                    <br>The Extra Mural Lectures in IITM, cover diverse topics, and bring in people from across the globe; those people, who have been pioneers and who have received the highest honours in their fields.
-                    
+                    One cannot achieve big without listening to people who have done it before. It is as they say; we
+                    shall not live long enough to learn from our own mistakes. We shall have to learn from others’ too.
+
+                    <br>The Extra Mural Lectures in IITM, cover diverse topics, and bring in people from across the
+                    globe; those people, who have been pioneers and who have received the highest honours in their
+                    fields.
+
                     Where else do you get to interact with people so knowledgeable, so experienced and so successful?
-                    
-                    The faces that you see on a television screen are brought before you to talk. These lectures unfold tales of unfathomable perseverance and unmatched genius.
+
+                    The faces that you see on a television screen are brought before you to talk. These lectures unfold
+                    tales of unfathomable perseverance and unmatched genius.
                 </p>
             </span>
             <div class="img-box">
                 <img src="img/eml.webp">
             </div>
-        
+
         </div>
         <hr>
         <span class="title">Competitions</span>
@@ -242,38 +268,53 @@
                 <p>
                     When there is an inter-IIT meet for sports and culturals why not for tech enthusiasts?
 
-                    Inter IIT tech meet is for the big brains of the country to showcase their talent and raise the name of the institution they come from. which usually happens in the even semester and is hosted by anyone of the participating IITs.
-                    
-                    <br>Tech meet gives you a chance to meet the most brilliant tech enthusiasts in the country and explore the projects.
-                    
-                    The events give you a chance to initiate, interact and innovate. initiatives. It helps in fostering the spirit of innovation and igniting young minds towards a more technologically and economically viable future.
-                    
-                    It sets an ideal platform for collaboration among the students to create impactful technology and knowledge transfer across the student community.
-            </p>
+                    Inter IIT tech meet is for the big brains of the country to showcase their talent and raise the name
+                    of the institution they come from. which usually happens in the even semester and is hosted by
+                    anyone of the participating IITs.
+
+                    <br>Tech meet gives you a chance to meet the most brilliant tech enthusiasts in the country and
+                    explore the projects.
+
+                    The events give you a chance to initiate, interact and innovate. initiatives. It helps in fostering
+                    the spirit of innovation and igniting young minds towards a more technologically and economically
+                    viable future.
+
+                    It sets an ideal platform for collaboration among the students to create impactful technology and
+                    knowledge transfer across the student community.
+                </p>
             </span>
-        
+
         </div>
+        <hr>
 
         <div class="type2">
             <span>
                 <h1>Tech Soc</h1>
                 <p>
-                    Tech-Soc was first born as a tournament where hostels could compete against each other in all tech-related events for points, power and glory.
+                    Tech-Soc was first born as a tournament where hostels could compete against each other in all
+                    tech-related events for points, power and glory.
 
-                    Together with Schroeter and Lit Soc, it forms the three independent “Big” trophies that hostels battle for every year.
-                    
-                    It has now become the umbrella under which all tech-related student initiatives will be encouraged and nurtured. 
-                    <br>In the odd semester, various informal sessions like “Fundae” and Tech interaction sessions will also be organized so that 
+                    Together with Schroeter and Lit Soc, it forms the three independent “Big” trophies that hostels
+                    battle for every year.
+
+                    It has now become the umbrella under which all tech-related student initiatives will be encouraged
+                    and nurtured.
+                    <br>In the odd semester, various informal sessions like “Fundae” and Tech interaction sessions will
+                    also be organized so that
                     the freshmen can learn about the tech world they are about to enter.
-                    We always have something or the other thing going on for the tech-savvy. You get to dirty your hands and build stuff on your 
-                    own or participate in tech quizzes or watch the spectacle as the different hostels battle it out in tech soc.
+                    We always have something or the other thing going on for the tech-savvy. You get to dirty your hands
+                    and build stuff on your
+                    own or participate in tech quizzes or watch the spectacle as the different hostels battle it out in
+                    tech soc.
                 </p>
             </span>
             <div class="img-box">
                 <img src="img/techsoc.jpeg">
             </div>
-        
+
         </div>
+
+        <hr>
 
         <div class="type1">
             <div class="img-box">
@@ -282,41 +323,51 @@
             <span>
                 <h1>Lit Soc</h1>
                 <p>
-                    Lit Soc is an epic year-long inter-hostel battle royale. All the hostels go head to head over the course of the academic year and battle 
-                    it out with each other trying to win different competitions to get the necessary points to take the Lit Soc cup home at the 
+                    Lit Soc is an epic year-long inter-hostel battle royale. All the hostels go head to head over the
+                    course of the academic year and battle
+                    it out with each other trying to win different competitions to get the necessary points to take the
+                    Lit Soc cup home at the
                     end of the year and be crowned champions.
 
-                    <br>The various events have different points and special points are awarded to enthusiastic and talented freshers! 
-                    Freshie events will also be held towards the beginning of the odd semester to initiate them into Lit Soc and give 
+                    <br>The various events have different points and special points are awarded to enthusiastic and
+                    talented freshers!
+                    Freshie events will also be held towards the beginning of the odd semester to initiate them into Lit
+                    Soc and give
                     them a feel of how intense and enjoyable Lit Soc events can be.
-                    
-                    It is a matter of great pride for hostel to win Lit Soc and as a resident of your hostel; it will be up to you to help your hostel win it.
+
+                    It is a matter of great pride for hostel to win Lit Soc and as a resident of your hostel; it will be
+                    up to you to help your hostel win it.
                 </p>
             </span>
-        
+
         </div>
+
+        <hr>
 
         <div class="type2">
             <span>
                 <h1>Inter IIT sports</h1>
                 <p>
-                    A General Championship (GC) is awarded to the team with the best performance in both the events. 
-                    The seven old IITs take turns, hosting the Meet in all splendor. This fierce competition for pride, 
-                    prestige and glory, equally embraces a great spirit of sportsmanship, which mark these moments as the 
-                    most cherishing memories of an IITian's life. 
-                    <br>The Meet is perhaps the only event, which provides an 
-                    opportunity to meet and interact with students from the other IITs. IIT Madras has had its major 
-                    share of glory, excelling continually at these games and winning the General Championship (GC) 
-                    eleven times in a row in the past. With over 19 wins in 51 Inter IIT Sports Meets so far, IIT 
-                    Madras has propounded itself as an unstoppable force in the history of the games, thanks to the 
+                    A General Championship (GC) is awarded to the team with the best performance in both the events.
+                    The seven old IITs take turns, hosting the Meet in all splendor. This fierce competition for pride,
+                    prestige and glory, equally embraces a great spirit of sportsmanship, which mark these moments as
+                    the
+                    most cherishing memories of an IITian's life.
+                    <br>The Meet is perhaps the only event, which provides an
+                    opportunity to meet and interact with students from the other IITs. IIT Madras has had its major
+                    share of glory, excelling continually at these games and winning the General Championship (GC)
+                    eleven times in a row in the past. With over 19 wins in 51 Inter IIT Sports Meets so far, IIT
+                    Madras has propounded itself as an unstoppable force in the history of the games, thanks to the
                     brilliant performance from the students.
                 </p>
             </span>
             <div class="img-box">
                 <img src="img/intersports.jpg">
             </div>
-        
+
         </div>
+
+        <hr>
 
 
     </div>
@@ -325,206 +376,221 @@
 
 
 <style>
-    
-    .type1{
-    width: 100%;
-    position: relative;
-    height: 500px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-.type1 .img-box{
-    position: absolute;
-    left: 40px;
-    overflow: hidden;
-    height:100% ;
-    width: 60%;
-}
-.type1 .img-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, transparent, rgba(16, 20, 27, .7) 80%);
-  }  
-    .type1 .img-box img{
-    width: 100%;
-  }
-  .type1 span {
-    position: absolute;
-    width: 50%;
-    right: 60px;
-    height: auto;
-    text-align: left;
-  }
+    .type1 {
+        width: 95%;
+        position: relative;
+        height: 450px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
 
-  .type1 span h1{
-    font-size:60px;
-    font-family: Josefin Sans;
-    width: fit-content;
-    font-weight: bold;
-  }
+    .type1 .img-box {
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        width: 60%;
+    }
 
-.type1 span p{
-    width: 100%;
-    text-align: left;
-    font-size: 18px;
-    margin-left: 0;
-    font-family: Poppins;
-}
+    .type1 .img-box::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, transparent, rgba(16, 20, 27) 80%);
+    }
 
-@media only screen and (max-width: 900px) {
-    .type1{
-    height: auto;
-    display: block;
-    position: relative;
-}
-.type1 .img-box{
-    position: relative;
-    overflow: hidden;
-    height:250px;
-    left:0;
-    width: 100%;
-}
-.type1 .img-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, transparent, rgba(16, 20, 27, .9) 80%);
-  }
+    .type1 .img-box img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+    }
 
-  .type1 span {
-    position: relative;
-    width: 100%;
-    top: -100px;
-    right: 0;
-    text-align: justify;
-    height: fit-content;
-  }
+    .type1 span {
+        position: absolute;
+        overflow-y: scroll;
+        width: 50%;
+        height: 100%;
+        text-align: left;
+    }
 
-  .type1 span h1{
-    text-align: center;
-    font-size:35px;
-    width: 100%;
-    padding-right: 10px;
-  }
-  .type1 span p{
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: justify;
-    margin-right: 0;
-    font-size:15px;
-  }
-}
+
+    .type1 span::-webkit-scrollbar {
+        display: none;
+    }
+
+    .type1 span h1 {
+        font-size: 55px;
+        font-family: Josefin Sans;
+        font-weight: bold;
+    }
+
+    .type1 span p {
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        font-family: Poppins;
+    }
+
+
+
+    @media only screen and (max-width: 900px) {
+        .type1 {
+            height: auto;
+            width: 100%;
+            display: block;
+            position: relative;
+        }
+
+        .type1 .img-box {
+            position: relative;
+            height: 250px;
+            left: 0;
+            width: 100%;
+        }
+
+        .type1 .img-box::after {
+            background-image: linear-gradient(to bottom, transparent, rgba(16, 20, 27));
+        }
+
+        .type1 span {
+            position: relative;
+            width: 100%;
+            right: 0;
+            text-align: justify;
+            height: fit-content;
+        }
+
+        .type1 span h1 {
+            text-align: center;
+            font-size: 35px;
+            width: 100%;
+            padding-right: 10px;
+        }
+
+        .type1 span p {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: justify;
+            margin-right: 0;
+            font-size: 15px;
+        }
+    }
 </style>
 
 
 
 <style>
+    .type2 {
+        width: 95%;
+        position: relative;
+        height: 450px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
 
-    .type2{
-    width: 100%;
-    position: relative;
-    margin-bottom: 50px;
-    height: 500px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-.type2 .img-box{
-    position: absolute;
-    right: 40px;
-    overflow: hidden;
-    height:100% ;
-    width: 60%;
-}
-.type2 .img-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to left, transparent, rgba(16, 20, 27, .7) 80%);
-  }
-  .type2 .img-box img{
-    width: 100%;
-  }
-    
-  .type2 span {
-    position: absolute;
-    width: 50%;
-    z-index: 5;
-      margin-bottom:20px;
-    left: 60px;
-    height: auto;
-    text-align: right;
-  }
+    .type2 .img-box {
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        right: 0;
+        width: 60%;
+    }
 
-  .type2 span h1{
-    font-size:60px;
-    font-family: Josefin Sans;
-    font-weight: bold;
-  }
+    .type2 .img-box::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to left, transparent, rgba(16, 20, 27) 80%);
+    }
 
-.type2 span p{
-    width: 100%;
-    text-align: right;
-    font-size: 17px;
-    margin-left: 0;
-    font-family: Poppins;
-}
+    .type2 .img-box img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        right: 0;
+    }
 
-@media only screen and (max-width: 900px) {
-    .type2{
-    height: fit-content;
-}
-.type2 .img-box{
-    position: relative;
-    overflow: hidden;
-    height:250px;
-    right: 0;
-    width: 100%;
-}
-.type2 .img-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, transparent, rgba(16, 20, 27, .9) 80%);
-  }
+    .type2 span {
+        position: absolute;
+        overflow-y: scroll;
+        width: 50%;
+        height: 100%;
+        left: 0;
+        z-index: 5;
+        text-align: right;
+    }
+    .type2 span::-webkit-scrollbar {
+        display: none;
+    }
 
-  .type2 span {
-    position: relative;
-    width: 100%;
-    left: 0;
-    text-align: left;
-    height: fit-content;
-  }
+    .type2 span h1 {
+        font-size: 60px;
+        font-family: Josefin Sans;
+        font-weight: bold;
+    }
 
-  .type2 span h1{
-    text-align: center;
-    font-size:35px;
-    width: 100%;
-    padding-right: 10px;
-  }
-  .type2 span p{
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: justify;
-    margin-right: 0;
-    font-size:15px;
-  }
-}
+    .type2 span p {
+        width: 100%;
+        text-align: right;
+        font-size: 17px;
+        margin-left: 0;
+        font-family: Poppins;
+    }
+
+    @media only screen and (max-width: 900px) {
+        .type2 {
+            height: fit-content;
+        }
+
+        .type2 .img-box {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+            right: 0;
+            width: 100%;
+        }
+
+        .type2 .img-box::after {
+            background-image: linear-gradient(to top, transparent, rgba(16, 20, 27));
+        }
+
+        .type2 span {
+            position: relative;
+            width: 100%;
+            left: 0;
+            text-align: left;
+            height: fit-content;
+        }
+
+        .type2 span h1 {
+            text-align: center;
+            font-size: 35px;
+            width: 100%;
+            padding-right: 10px;
+        }
+
+        .type2 span p {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: justify;
+            margin-right: 0;
+            font-size: 15px;
+        }
+    }
 </style>
