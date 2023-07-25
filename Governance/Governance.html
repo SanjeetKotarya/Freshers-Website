@@ -14,7 +14,7 @@
 
     <div class="paragraph">
       <p>
-        <span class="first-letter">I</span>n India, there are very few colleges that offer a supportive environment
+        <p><span class="drop-cap">I</span>n India, there are very few colleges that offer a supportive environment
         where students can express their concerns and thoughts. But IIT Madras is
         distinct from other universities. The respect accorded to student voices,
         which has been codified in the form of the Students Constitution, is one
@@ -316,18 +316,24 @@
   }
 
 
-  .first-letter {
-    float: left;
-    font-size: 60px;
-    font-weight: bold;
-    margin-right: 8px;
-    line-height: 0.9;
-    color: transparent;
-    background-image: linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, .8) 50%, transparent 52%), linear-gradient(45deg, #b6a571, #cdb373, #e7da9a);
-    background-clip: text;
-    background-size: 500% 500%, 100% 100%;
-    animation: backgroudFade 2s linear infinite normal backwards;
-  }
+  .paragraph p {
+        text-align: justify;
+    }
+
+    .drop-cap {
+        float: left;
+        font-size: 60px;
+        font-weight: bold;
+        margin-right: 8px;
+        line-height: 0.9;
+        color: transparent;
+        background-image: linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, .8) 50%, transparent 52%), linear-gradient(45deg, #b6a571, #cdb373, #e7da9a);
+        background-clip: text;
+        -webkit-background-clip: text;
+        /* For Safari support */
+        background-size: 500% 500%, 100% 100%;
+        animation: backgroundFade 2s linear infinite;
+    }
 
   @keyframes backgroudFade {
     0% {
@@ -338,6 +344,7 @@
       background-position: 100% 100%;
     }
   }
+  
 
   hr {
     margin: 0 auto;
