@@ -17,6 +17,49 @@
 
     <div class="page-body">
 
+
+
+        <div id="card-area" >
+            <div class="wrapper">
+                <div class="box-area">
+                    <a class="box" href="#wifi">
+                        <img src="img/wifi.png" alt="">
+                        <div class="overlay">
+                            <h3>WIFI/LAN</h3>
+                        </div>
+                        <span></span>
+                    </a>
+
+                    <a class="box" href="#todo">
+                        <img src="img/todo.svg" alt="">
+                        <div class="overlay">
+                            <h3>To do</h3>
+                        </div>
+                        <span></span>
+                    </a>
+
+                    <a class="box" href="#ccash">
+                        <img src="img/ccash.png" alt="">
+                        <div class="overlay">
+                            <h3>CCASH</h3>
+                        </div>
+                        <span></span>
+                    </a>
+
+                    <a class="box" href="#ragging">
+                        <img src="img/ragging.png" alt=""   id="wifi">
+                        <div class="overlay" >
+                            <h3 >Ragging</h3>
+                        </div>
+                        <span></span>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <hr >
+
         <div class="bar1">
             <div class="img-box">
                 <img src="img/wifi.png">
@@ -28,13 +71,13 @@
                     it to their Laptop/PC. And Wi-Fi is available in Academic Section, In Library and many more place.
                     For to connect to wi-fi you just have to select iitmwifi in wi-fi option on your device and connect
                     it through your roll no and LDAP Password.
-                    <br><br><b>General Instruction to connect LAN :</b>
+                    <br><br><b >General Instruction to connect LAN :</b>
                     <br><i>Instructions are given here for Firefox only -</i>
-                    <br>
+                    <br >
                     1. Open the “Preferences” page in Firefox
                     <br>2. Open the “Network Settings” page under the Preferences (search for “proxy” should do
                     it)
-                    <br>3. Set the Proxy Auto-Config URL and reload if necessary
+                    <br id="ragging">3. Set the Proxy Auto-Config URL and reload if necessary
                     <br>4. Log in with LDAP credentials.
                     <br><br>Once the above steps are done, you should find that only traffic destined for
                     workflow, academic, journals etc goes through the proxy, and everything else
@@ -61,7 +104,7 @@
                     This friendly conversation has always ended up in leaving both the parties
                     close to each other. For the seniors it is the time to get rid of unwanted books.
                     For the juniors it is an hour or two well spent getting to know the ropes. Nothing
-                    more, nothing less. <br>
+                    more, nothing less. <br id="ccash">
                     We empathize in case you feel uncomfortable and are always free
                     to let them know or leave the place. Also please let your mentor know if
                     someone is not abiding by the above.
@@ -70,8 +113,9 @@
             </div>
             <div class="img-box"> <img src="img/ragging.png"></div>
         </div>
+        <hr>
 
-        <div class="bar1">
+        <div class="bar1" >
             <div class="img-box"><img src="img/ccash.png"></div>
             <div class="text-box">
                 <h1>CCASH</h1>
@@ -91,15 +135,15 @@
 
                     <br><br><b>The responsibilities of the committees are:</b><br>
                     1. To act as an inquiry authority on the complaint of sexual harassment
-                    <br>2. To ensure that victims and witnesses are not victimised or discriminated Against , because of
+                    <br >2. To ensure that victims and witnesses are not victimised or discriminated Against , because of
                     their complaints
                     <br>3. To take proactive measures towards sensitisation of the staff, students and faculty members
                     of the IIT Madras on gender issues.
 
-                    <br><i>The complaints are dealt with utmost confidentially and secrecy and made sure that justice is
+                    <br ><i>The complaints are dealt with utmost confidentially and secrecy and made sure that justice is
                         delivered.</i>
                     <br>Mail id: <a href="ccash@iitm.ac.in">ccash@iitm.ac.in</a>
-                    <br>Website: <a href="www.iitm.ac.in/complaintcommittee">www.iitm.ac.in/complaintcommittee</a>
+                    <br id="todo">Website: <a href="www.iitm.ac.in/complaintcommittee">www.iitm.ac.in/complaintcommittee</a>
 
                 </p>
 
@@ -107,7 +151,7 @@
         </div>
         <hr>
 
-        <div class="bar2">
+        <div class="bar2" >
             <div class="text-box">
                 <h1>To do list</h1>
                 <p>
@@ -470,4 +514,97 @@
             font-size: 35px;
         }
     }
+</style>
+
+
+<style>
+    .wrapper{
+    padding: 0px 10%;
+}
+
+.box-area{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.box {
+	position: relative;
+	overflow: hidden;
+    width: 15%;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 12px;
+    height: 180px;
+}
+
+.box span{
+    position: absolute;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: black;
+    height: 100%;
+    transition: .3s ease-in-out;
+}
+
+.box:hover span{
+    width: 100%;
+    border-radius:0 ;
+}
+.box:hover h3{
+    color: white;
+}
+.box img{
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+.overlay {
+	width: 100%;
+    padding: 0 auto;
+	position: absolute;
+	left: 0;
+    z-index: 3;
+    bottom:0;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+    color: black;
+    backdrop-filter: blur(5px);
+
+}
+
+.overlay h3 {
+	font-weight: 500;
+    line-height: 0;
+	font-family: Josefin Sans;
+	font-size: 20px;
+    font-weight: bold;
+	text-align: center;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .wrapper{
+    padding:0 10px;
+}
+
+.overlay h3 {
+	font-size: 13px;
+}
+
+    .box {
+	position: relative;
+	overflow: hidden;
+    width: 20%;
+    cursor: pointer;
+    height: 80px;
+}
+}
+
 </style>
