@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Freshers-Website</title>
+    <title>InstiOps</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&display=swap" rel="stylesheet">
@@ -270,7 +270,7 @@
             border-radius: 35px;
             padding: 18px 0;
             cursor: pointer;
-            width: 220px;
+            width: 100px;
             font-size: 14px;
             color: #AE1100;
             font-weight: bold;
@@ -364,12 +364,12 @@
             }
 
             #search {
-                width: 70%;
+                width: 75%;
                 padding: 15px;
             }
 
             button {
-                width: 150px;
+                width: 30%;
             }
 
             .question {
@@ -423,28 +423,57 @@
 
             <!-- FAQ Section -->
             <div id="faq">
-                <div class="question" onclick="toggleAnswerVisibility(this)">
-                    <h3>What is the library opening hours?</h3>
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+                    <h3 >What is the library opening hours?</h3>
                     <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
                 </div>
-
-                <div class="question" onclick="toggleAnswerVisibility(this)">
+        
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
                     <h3>How can I apply for hostel accommodation?</h3>
                     <p class="answer">You can apply for hostel accommodation through the student portal.</p>
                 </div>
-                <div class="question" onclick="toggleAnswerVisibility(this)">
-                    <h3>What is the library opening hours?</h3>
-                    <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+                    <h3>What programs and majors does the college offer?</h3>
+                    <p class="answer">
+                        The college offers a wide range of programs and majors across various disciplines, including arts, sciences, business, engineering, and more. For a comprehensive list, please visit our official website or contact the admissions office.</p>
+                </div>
+        
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+                    <h3>What are the admission requirements and how do I apply?</h3>
+                    <p class="answer">
+                        Admission requirements vary depending on the program and the level of study. Generally, applicants need to submit their academic transcripts, standardized test scores (if required), letters of recommendation, a personal statement, and an application fee. Detailed information can be found on our admissions webpage.
+                    </p>
+                </div>
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+                    <h3>Is campus housing available for students?</h3>
+                    <p class="answer">
+                        Yes, the college provides on-campus housing options for students. Living on campus offers numerous benefits, including easy access to academic resources, a vibrant campus life, and a sense of community. It's best to apply for housing early, as space may be limited.
+                    </p>
                 </div>
 
-                <div class="question" onclick="toggleAnswerVisibility(this)">
-                    <h3>How can I apply for hostel accommodation?</h3>
-                    <p class="answer">You can apply for hostel accommodation through the student portal.</p>
+
+
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+                    <h3 >What extracurricular activities and clubs are available on campus?</h3>
+                    <p class="answer">
+                        Our college encourages students to engage in extracurricular activities and offers a diverse range of clubs and organizations. Whether you're interested in sports, arts, community service, or academic clubs, there's something for everyone. Check out the student affairs office for a list of available options.
+                    </p>
                 </div>
-                <div class="question" onclick="toggleAnswerVisibility(this)">
-                    <h3>What is the library opening hours?</h3>
-                    <p class="answer">The library is open from 9 AM to 6 PM on weekdays.</p>
+        
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+                    <h3>How is the campus safety and security maintained?</h3>
+                    <p class="answer">
+                        The safety and security of our students, faculty, and staff are a top priority. We have a dedicated campus security team that operates 24/7, emergency call boxes placed strategically across campus, and safety protocols in place to ensure a secure learning environment.
+                    </p>
                 </div>
+                <div class="question" onclick="toggleAnswerVisibility(this);toggleQuestion(this)">
+                    <h3>Are there study abroad programs for students?</h3>
+                    <p class="answer">
+                        Yes, we offer study abroad programs that allow students to gain a global perspective and experience different cultures. Studying abroad provides a unique learning experience and can be a transformative part of a student's college journey.                    </p>
+                </div>
+        
+
+
 
 
 
@@ -506,6 +535,11 @@
             }
 
         }
+
+        function toggleQuestion(questionElement) {
+  questionElement.classList.toggle('open');
+}
+
 
     </script>
 
