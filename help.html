@@ -473,6 +473,7 @@
     <script id="footer" src="footer.js"></script>
     
     <script>
+
         document.getElementById('search').addEventListener('keyup', function () {
             const input = this.value.toLowerCase();
             const questions = document.querySelectorAll('.question');
@@ -483,6 +484,22 @@
                 question.style.display = display;
             });
         });
+
+
+        function toggleAnswerVisibility(parent) {
+            const answer = parent.querySelector('.answer');
+            if (answer.style.height === '0px' || answer.style.height === '') {
+                answer.style.height = 'auto';
+            } else {
+                answer.style.height = '0px';
+            }
+
+        }
+
+        function toggleQuestion(questionElement) {
+            questionElement.classList.toggle('open');
+        }
+
     </script>
 
 
