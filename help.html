@@ -471,6 +471,19 @@
     </div>
 
     <script id="footer" src="footer.js"></script>
+    
+    <script>
+        document.getElementById('search').addEventListener('keyup', function () {
+            const input = this.value.toLowerCase();
+            const questions = document.querySelectorAll('.question');
+
+            questions.forEach(question => {
+                const questionText = question.querySelector('h3').innerText.toLowerCase();
+                const display = questionText.includes(input) ? 'block' : 'none';
+                question.style.display = display;
+            });
+        });
+    </script>
 
 
 </body>
