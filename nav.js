@@ -68,38 +68,5 @@ openTab('dep');
 
 
 
-// Function to handle search in FAQ
-function searchFAQ() {
-  const input = document.getElementById('search').value.toLowerCase();
-  const questions = document.querySelectorAll('.question');
-
-  questions.forEach(question => {
-      const questionText = question.querySelector('h3').innerText.toLowerCase();
-      const display = questionText.includes(input) ? 'block' : 'none';
-      question.style.display = display;
-  });
-}
-
-
-function toggleAnswerVisibility(parent) {
-  const answer = parent.querySelector('.answer');
-  if (answer.style.height === '0px' || answer.style.height === '') {
-      answer.style.height = 'auto';
-  } else {
-      answer.style.height = '0px';
-  }
-
-}
-
-function toggleQuestion(questionElement) {
-  questionElement.classList.toggle('open');
-}
-
-
-
-
-
-
-
 
 
