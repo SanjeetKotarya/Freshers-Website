@@ -27,514 +27,460 @@
     a {
       text-decoration: none;
     }
-
   </style>
 
-<style>
-  .home-page {
-    background-color: #FAF6F0;
-  }
-
-  .home-page .layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(transparent 80%, #10141B);
-  }
-
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-
-  .intro {
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    justify-content: center;
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
-    overflow: hidden;
-  }
-
-
-  .message {
-    position: relative;
-  }
-
-  .btn {
-    color: #fff;
-    border-radius: 25px;
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
-    width: 80px;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  .show,
-  .hide {
-    position: absolute;
-    top: 20px;
-    right: 10%;
-    z-index: 5;
-    font-family: MuseoModerno;
-    text-align: center;
-    display: none;
-  }
-
-
-  .panel {
-    position: relative;
-    margin: 2em auto;
-    width: 80%;
-    text-align: justify;
-    max-height: fit-content;
-    overflow: hidden;
-    font-family: Poppins;
-    font-size: 18px;
-  }
-
-  .scroll-effect {
-    border-radius: 0;
-  }
-
-
-  hr {
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 70%;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
-}
-
-
-
-  .section-one__first--letter {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: Josefin Sans;
-    line-height: 4rem;
-    color: transparent;
-    background-image: linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, .8) 50%, transparent 52%), linear-gradient(45deg, #b6a571, #cdb373, #e7da9a);
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-size: 500% 500%, 100% 100%;
-    animation: backgroudFade 2s linear infinite normal backwards;
-  }
-
-  @keyframes backgroudFade {
-    0% {
-      background-position: 0 0;
+  <style>
+    .home-page {
+      background-color: #FAF6F0;
     }
 
-    100% {
-      background-position: 100% 100%;
-    }
-  }
-
-
-  @media only screen and (max-width: 900px) {
-    .section-one__first--letter {
-      font-size: 24px;
+    .home-page .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(transparent 80%, #10141B);
     }
 
-    .panel {
-      font-size: 15px;
-      max-height: 200px;
-      width: 90%;
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .intro {
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      justify-content: center;
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      text-align: center;
+      z-index: 2;
+      overflow: hidden;
     }
 
 
+    .message {
+      position: relative;
+    }
+
+    .btn {
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      color: black;
+      font-size: 13px;
+      width: 80px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
 
     .show,
     .hide {
-      display: block;
-    }
-
-    .hide {
+      position: absolute;
+      top: 20px;
+      right: 10%;
+      z-index: 5;
+      font-family: MuseoModerno;
+      text-align: center;
       display: none;
     }
 
-    .show:target {
-      display: none;
-    }
 
-    .show:target~.hide {
-      display: block;
-    }
-
-    .show:target~.panel {
+    .panel {
+      position: relative;
+      margin: 2em auto;
+      width: 80%;
+      text-align: justify;
       max-height: fit-content;
+      overflow: hidden;
+      font-family: Poppins;
+      font-size: 18px;
     }
 
-    .show:target~.fade {
-      margin-top: 0;
-    }
-  }
-
-
-  .ScrollDown_box {
-    position: absolute;
-    margin: 0 auto;
-    bottom: 0px;
-    padding: 10px;
-   
-
-  }
-
-  .btn_ScrollDown {
-    display: block;
-    padding-top: 84px;
-    width: 20px;
-    height: 20px;
-    margin: 0 auto;
-    position: relative;
-    text-decoration: none;
-  }
-
-  .btn_ScrollDown fish {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -10px;
-    width: 20px;
-    height: 20px;
-    border-left: 3px solid white;
-    border-bottom: 3px solid white;
-    animation: sdb4 1.5s infinite;
-    box-sizing: border-box;
-  }
-
-  .btn_ScrollDown span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 20px;
-    margin-left: -10px;
-    height: 20px;
-    border-left: 3px solid white;
-    border-bottom: 3px solid white;
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-  }
-
-  .btn_ScrollDown span:nth-of-type(1) {
-    animation: sdb1 1.5s infinite;
-    animation-delay: .2s;
-  }
-
-  .btn_ScrollDown span:nth-of-type(2) {
-    animation: sdb2 1.5s infinite;
-    top: 10px;
-    animation-delay: .6s;
-  }
-
-
-  @keyframes sdb4 {
-    0% {
-      transform: scale(0) translateY(0) rotate(-45deg);
-    }
-
-    20% {
-      transform: scale(1) rotate(-45deg);
-    }
-
-    100% {
-      transform: translateY(25px) rotate(-45deg);
-    }
-  }
-
-  @keyframes sdb1 {
-    0% {
-      opacity: 1;
-    }
-
-    80% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes sdb2 {
-    0% {
-      opacity: 1;
-    }
-
-    80% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 0;
-    }
-  }
-</style>
-
-<style>
-  .vision,
-  .mission {
-    width: 60%;
-    text-align: center;
-    margin: 40px auto;
-  }
-
-  .vision {
-    padding-bottom: 40px;
-  }
-
-  .vision p {
-    font-family: Poppins;
-    display: block;
-    font-size: 20px;
-  }
-
-  .title {
-    font-family: Josefin Sans;
-    display: block;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 40px;
-    margin: 40px 0;
-  }
-
-  .values {
-    width: 65%;
-    height: 55vh;
-    justify-content: space-between;
-    position: relative;
-    display: flex;
-    margin: 50px auto;
-    padding-bottom: 50px;
-  }
-
-  .values h4 {
-    font-family: 'MuseoModerno', cursive;
-    font-size: 14px;
-    width: fit-content;
-    color: #9FA1AD;
-  }
-
-  .values h1 {
-    font-family: Josefin Sans;
-    width: 80%;
-    font-size: 35px;
-  }
-
-  .values ul {
-    font-family: Poppins;
-    counter-increment: list-number;
-    margin-left: -30px;
-    font-size: 18px;
-    list-style-type: decimal;
-  }
-
-  .values ul li {
-    margin-top: 10px;
-  }
-
-  .values .child1 {
-    width: 50%;
-    position: absolute;
-    height: 100%;
-    overflow: hidden;
-  }
-  .values .child2 {
-    width: 50%;
-    position: absolute;
-right: 50px;
-top: 20px;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .values .child1::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to right, transparent, rgba(16, 20, 27,.6) 100%);
+    .scroll-effect {
+      border-radius: 0;
     }
 
 
-  .values .child1 img {
-    position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        top: 0;
-        left: 0;
-        transition: .5s ease-in-out;
-  }
-
-  .values:hover .child1 img {
-    transform: scale(1.05);
-  }
-
-
-  .values .child2 span {
-    position: absolute;
-    background-color: #242633;
-    padding:20px 30px;
-    width: 100%;
-    color: white;
-  height: 100%;
-    box-shadow: -36px -30px 16px -15px rgba(0,0,0,0);    
-
-  }
-
-
-
-
-  @media only screen and (max-width: 900px) {
-
-    .title {
-      font-size: 35px;
+    hr {
+      margin: 0 auto;
+      margin-top: 40px;
+      width: 70%;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
     }
 
-    .values h4 {
-      font-size: 11px;
+
+
+    .section-one__first--letter {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: Josefin Sans;
+      line-height: 4rem;
+      color: transparent;
+      background-image: linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, .8) 50%, transparent 52%), linear-gradient(45deg, #b6a571, #cdb373, #e7da9a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-size: 500% 500%, 100% 100%;
+      animation: backgroudFade 2s linear infinite normal backwards;
     }
 
-    .values h1 {
-      width: 100%;
-      font-size: 25px;
+    @keyframes backgroudFade {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: 100% 100%;
+      }
     }
 
+
+    @media only screen and (max-width: 900px) {
+      .section-one__first--letter {
+        font-size: 24px;
+      }
+
+      .panel {
+        font-size: 15px;
+        max-height: 200px;
+        width: 90%;
+      }
+
+
+
+      .show,
+      .hide {
+        display: block;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .show:target {
+        display: none;
+      }
+
+      .show:target~.hide {
+        display: block;
+      }
+
+      .show:target~.panel {
+        max-height: fit-content;
+      }
+
+      .show:target~.fade {
+        margin-top: 0;
+      }
+    }
+
+
+    .ScrollDown_box {
+      position: absolute;
+      margin: 0 auto;
+      bottom: 0px;
+      padding: 10px;
+
+
+    }
+
+    .btn_ScrollDown {
+      display: block;
+      padding-top: 84px;
+      width: 20px;
+      height: 20px;
+      margin: 0 auto;
+      position: relative;
+      text-decoration: none;
+    }
+
+    .btn_ScrollDown fish {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -10px;
+      width: 20px;
+      height: 20px;
+      border-left: 3px solid white;
+      border-bottom: 3px solid white;
+      animation: sdb4 1.5s infinite;
+      box-sizing: border-box;
+    }
+
+    .btn_ScrollDown span {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 20px;
+      margin-left: -10px;
+      height: 20px;
+      border-left: 3px solid white;
+      border-bottom: 3px solid white;
+      transform: rotate(-45deg);
+      box-sizing: border-box;
+    }
+
+    .btn_ScrollDown span:nth-of-type(1) {
+      animation: sdb1 1.5s infinite;
+      animation-delay: .2s;
+    }
+
+    .btn_ScrollDown span:nth-of-type(2) {
+      animation: sdb2 1.5s infinite;
+      top: 10px;
+      animation-delay: .6s;
+    }
+
+
+    @keyframes sdb4 {
+      0% {
+        transform: scale(0) translateY(0) rotate(-45deg);
+      }
+
+      20% {
+        transform: scale(1) rotate(-45deg);
+      }
+
+      100% {
+        transform: translateY(25px) rotate(-45deg);
+      }
+    }
+
+    @keyframes sdb1 {
+      0% {
+        opacity: 1;
+      }
+
+      80% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes sdb2 {
+      0% {
+        opacity: 1;
+      }
+
+      80% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <style>
     .vision,
     .mission {
-      width: 90%;
+      width: 60%;
+      text-align: center;
+      margin: 40px auto;
+    }
+
+    .vision {
+      padding-bottom: 40px;
     }
 
     .vision p {
-      font-size: 15px;
+      font-family: Poppins;
+      display: block;
+      font-size: 20px;
+    }
+
+    .title {
+      font-family: Josefin Sans;
+      display: block;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 40px;
+      margin: 40px 0;
     }
 
     .values {
-      width: 100%;
-      display: block;
-      margin-bottom: 50px;
-      height: 70vh;
+      width: 65%;
+      height: 55vh;
+      justify-content: space-between;
+      position: relative;
+      display: flex;
+      margin: 0 auto;
     }
 
-    .values .child1 {
-      width: 95%;
-      height: 50vh;
-      position: absolute;
+    .values h4 {
+      font-family: 'MuseoModerno', cursive;
+      font-size: 14px;
+      width: fit-content;
+      color: #9FA1AD;
     }
 
-    .values .child2 {
-      width: 95%;
-      right: 0;
+    .values h1 {
+      font-family: Josefin Sans;
+      width: 80%;
+      font-size: 35px;
     }
 
     .values ul {
-      font-size: 14px;
+      font-family: Poppins;
+      counter-increment: list-number;
+      margin-left: -20px;
+      font-size: 18px;
+      list-style-type: upper-roman;
     }
+
+    .values ul li {
+      margin-top: 5px;
+    }
+
+    .values .child1 {
+      width: 50%;
+      position: absolute;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .values .child2 {
+      width: 50%;
+      position: absolute;
+      right: 50px;
+      bottom: -20px;
+      height: fit-content;
+      background-color: #242633;
+      padding: 20px;
+    }
+
+    .values .child1::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right, transparent, rgba(16, 20, 27, .6) 100%);
+    }
+
+
+    .values .child1 img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      transition: .5s ease-in-out;
+    }
+
+    .values:hover .child1 img {
+      transform: scale(1.05);
+    }
+
 
     .values .child2 span {
-      padding: 10px 20px;
-      top: 40%;
       width: 100%;
+      color: white;
+      height: 100%;
+      box-shadow: -36px -30px 16px -15px rgba(0, 0, 0, 0);
 
     }
 
-  }
 
 
-  .mission ul {
-    font-family: Poppins;
-    border-radius: 15px;
-    padding-bottom: 30px;
-    font-size: 20px;
-  }
 
-  .mission ul li {
-    text-align: left;
-  }
+    @media only screen and (max-width: 900px) {
 
-  .symbol {
-    padding: 0 10px;
-  }
+      .title {
+        font-size: 35px;
+      }
 
-  .intro .intro-text {
-    width: 70%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+      .values h4 {
+        font-size: 11px;
+      }
 
-  }
+      .values h1 {
+        width: 100%;
+        font-size: 25px;
+      }
 
-  .intro .intro-text h1 {
-    font-size: 9vh;
-    font-weight: bold;
-    font-family: Josefin Sans;
-    color: white;
+      .vision,
+      .mission {
+        width: 90%;
+      }
 
-  }
+      .vision p {
+        font-size: 15px;
+      }
 
-  .intro .intro-text h3 {
-    font-size: 16px;
-    font-family: Poppins;
-    margin: 0 auto;
-    width: 60%;
-    color: white;
-    font-weight: 100;
-  }
+      .values {
+        width: 100%;
+        display: block;
+        height: 70vh;
 
-  .intro-text h1{
-    opacity: 0;
-    animation: scaleUpAnimation 2s ease-in forwards;
-    animation-delay: 1s;
-  }
-  .intro-text h3{
-    opacity: 0;
-    animation: scaleUpAnimation 2s ease-in forwards;
-    animation-delay: 2.5s;
-  }
+      }
 
-  @keyframes scaleUpAnimation {
-    from {
-      opacity: 0;
+      .values .child1 {
+        width: 95%;
+        height: 50%;
+        position: absolute;
+      }
+      .values .child1::after {
+      background-image: linear-gradient(to bottom, transparent, rgba(16, 20, 27, .6) 100%);
+    }
+      .values .child2 {
+        width: 95%;
+        padding: 10px;
+        height: fit-content;
+        bottom: 0;
+        right: 0;
+      }
+
+      .values ul {
+        font-size: 14px;
+      }
+
     }
 
-    to {
-      opacity: 1;
-
-    }
-  }
-
-  @media only screen and (max-width: 900px) {
 
     .mission ul {
-      font-size: 15px;
+      font-family: Poppins;
+      border-radius: 15px;
+      padding-bottom: 30px;
+      font-size: 20px;
+    }
+
+    .mission ul li {
+      text-align: left;
+    }
+
+    .symbol {
+      padding: 0 10px;
     }
 
     .intro .intro-text {
-      width: 80%;
+      width: 70%;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+
     }
 
     .intro .intro-text h1 {
-      font-size: 7vh;
+      font-size: 9vh;
       font-weight: bold;
       font-family: Josefin Sans;
       color: white;
@@ -542,13 +488,63 @@ top: 20px;
     }
 
     .intro .intro-text h3 {
-      font-size: 14px;
-      width: 90%;
+      font-size: 16px;
+      font-family: Poppins;
+      margin: 0 auto;
+      width: 60%;
+      color: white;
+      font-weight: 100;
     }
-  }
-</style>
 
-  
+    .intro-text h1 {
+      opacity: 0;
+      animation: scaleUpAnimation 2s ease-in forwards;
+      animation-delay: 1s;
+    }
+
+    .intro-text h3 {
+      opacity: 0;
+      animation: scaleUpAnimation 2s ease-in forwards;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes scaleUpAnimation {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+
+      .mission ul {
+        font-size: 15px;
+      }
+
+      .intro .intro-text {
+        width: 80%;
+      }
+
+      .intro .intro-text h1 {
+        font-size: 7vh;
+        font-weight: bold;
+        font-family: Josefin Sans;
+        color: white;
+
+      }
+
+      .intro .intro-text h3 {
+        font-size: 14px;
+        width: 90%;
+      }
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -559,8 +555,8 @@ top: 20px;
       <span class="layer"></span>
       <span class="intro-text">
         <h1>Welcome to IIT Madras!</h1>
-        <h3>Step into a world of limitless possibilities where curiosity meets opportunity. 
-          This website serves as your gateway to a treasure trove of knowledge 
+        <h3>Step into a world of limitless possibilities where curiosity meets opportunity.
+          This website serves as your gateway to a treasure trove of knowledge
           about everything our college has to offer.
         </h3>
       </span>
@@ -569,15 +565,15 @@ top: 20px;
           <fish id="panel"></fish><span></span><span></span>
         </a>
       </div>
-  
+
       <video autoplay muted loop>
         <source src="img/video.mp4" type="video/mp4">
       </video>
-  
+
     </div>
-  
-  
-  
+
+
+
     <div class="message">
       <a href="#show" class="show btn" id="show">Read more</a>
       <a href="#hide" class="hide btn" id="hide">Collapse</a>
@@ -587,12 +583,14 @@ top: 20px;
         sleepless nights, and endless dedication have led you to this exciting phase of your life. Just like those who
         have come before you, there may be uncertainties and challenges along the way, but rest assured, it will be a
         beautiful journey.<br>
-        Here at IIT Madras, we believe in providing a holistic educational experience that encompasses academics, sports,
+        Here at IIT Madras, we believe in providing a holistic educational experience that encompasses academics,
+        sports,
         and cultural activities. We offer a multitude of opportunities for you to explore your true interests and
         passions. Through various events and programs, we aim not only to bring out your hidden talents but also to
         develop your organizational and leadership skills.<br>
         Moreover, IIT Madras creates an environment that encourages personal growth and excellence in every aspect of
-        life. Your experiences and outcomes may vary based on the decisions you make, but in the end, the overall picture
+        life. Your experiences and outcomes may vary based on the decisions you make, but in the end, the overall
+        picture
         will always be a beautiful one.<br>
         Welcome to our family at IIT Madras! We are thrilled to have you join us on this remarkable journey of
         self-discovery and achievement.
@@ -602,10 +600,10 @@ top: 20px;
           Students General Secretary</i><br>
       </div>
     </div>
-  
+
     <hr>
-  
-  
+
+
     <span class="title">Core Values</span>
     <div class="values">
       <div class="child1">
@@ -624,29 +622,29 @@ top: 20px;
         </span>
       </div>
     </div>
-  
+
     <hr>
-  
+
     <div class="mission">
       <span class="title">Missions</span>
       <ul>
-  
+
         <li>To create and sustain a community of learning in which students
           acquire knowledge and learn to apply it professionally with due conside
           ation for ethical, ecological, and economic issues.</li>
-  
+
         <li>To pursue research and disseminate research findings.</li>
-  
+
         <li>To provide knowledge-based technological services to satisfy the needs
           of society and the industry.</li>
-  
+
         <li>To help in building national capabilities in science, technology, humanities, management, education and
           research.</li>
       </ul>
     </div>
-  
+
     <hr>
-  
+
     <div class="vision">
       <span class="title">Vision</span>
       <p>To be an academic institution in
@@ -659,7 +657,7 @@ top: 20px;
         nation.
       </p>
     </div>
-  
+
   </div>
 
   <script id="footer" src="footer.js"></script>
