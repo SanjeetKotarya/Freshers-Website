@@ -44,7 +44,7 @@
 
     .paragraph p {
         text-align: left;
-        font-size: 20px;
+        font-size: 18px;
 
     }
 
@@ -72,181 +72,6 @@
             background-position: 100% 100%;
         }
     }
-
-
-    .bar1 {
-        width: 90%;
-        height: fit-content;
-        position: relative;
-        align-items: center;
-        margin: 50px auto;
-        display: flex;
-        overflow: hidden;
-    }
-
-    .bar1 .img-box {
-        width: 40%;
-        height: 400px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden;
-    }
-
-    .bar1 .img-box img {
-        width: auto;
-        height: 100%;
-    }
-
-    .bar2 .img-box img {
-        width: auto;
-        height: 100%;
-    }
-
-    .bar2 {
-        width: 90%;
-        height: fit-content;
-        position: relative;
-        align-items: center;
-        margin: 40px auto;
-        overflow: hidden;
-        display: flex;
-    }
-
-    .bar2 .img-box {
-        width: 40%;
-        height: 400px;
-        background-size: cover;
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .bar2 .text-box {
-        width: 60%;
-        text-align: center;
-        justify-content: center;
-        padding: 0 15px;
-        align-items: center;
-        color: black;
-        overflow: hidden;
-        text-align: justify;
-        position: relative;
-    }
-
-    .bar1 .text-box {
-        width: 60%;
-        text-align: center;
-        justify-content: center;
-        padding: 0 15px;
-        align-items: center;
-        color: black;
-        overflow: hidden;
-        text-align: justify;
-        position: relative;
-    }
-
-    .bar1 .text-box h1 {
-        font-size: 50px;
-        font-family: Josefin Sans;
-    }
-
-    .bar1 .text-box p {
-        font-size: 18px;
-        font-family: Poppins;
-        text-align: justify;
-        padding-left: 18px;
-        width: 100%;
-    }
-
-    .bar2 .text-box h1 {
-        font-size: 50px;
-        font-family: Josefin Sans;
-    }
-
-    .bar2 .text-box p {
-        font-size: 16px;
-        font-family: Poppins;
-        text-align: justify;
-        padding-right: 20px;
-        width: 100%;
-    }
-
-
-    @media only screen and (max-width: 900px) {
-
-        .bar1 .img-box img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .bar2 .img-box img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .bar1 .text-box h1 {
-            font-size: 32px;
-
-        }
-
-        .bar1 .text-box p {
-            font-size: 15px;
-            padding-left: 0;
-        }
-
-        .bar2 .text-box p {
-            font-size: 15px;
-            padding-right: 0;
-        }
-
-        .bar2 .text-box h1 {
-            font-size: 32px;
-        }
-
-
-        .bar1 {
-            width: 100%;
-            height: fit-content;
-            margin: 50px auto;
-            display: block;
-        }
-
-        .bar1 .img-box {
-            width: 100%;
-            height: 250px;
-        }
-
-        .bar2 {
-            width: 100%;
-            height: fit-content;
-            margin: 40px auto;
-            display: block;
-        }
-
-        .bar2 .img-box {
-            width: 100%;
-            height: 250px;
-        }
-
-        .bar2 .text-box {
-            width: 100%;
-            padding: 0 15px;
-            margin-bottom: 10px;
-            align-items: center;
-            height: fit-content;
-            text-align: center;
-        }
-
-        .bar1 .text-box {
-            width: 100%;
-            padding: 0 15px;
-            height: fit-content;
-            text-align: center;
-        }
-        
-    }
-
 
 
     .page-body {
@@ -375,6 +200,209 @@
         }
     }
 </style>
+
+<style>
+    .bar1 {
+        width: 90%;
+        position: relative;
+        height: 400px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 40px auto;
+    }
+
+    .bar1 .img-box {
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        width: 40%;
+    }
+
+    .bar1 .img-box::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bar1 .img-box img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+    }
+
+    .bar1 .text-box {
+        position: absolute;
+        overflow-y: scroll;
+        width: 60%;
+        padding: 20px;
+        height: 100%;
+        right: 0;
+        text-align: left;
+    }
+
+
+    .bar1 .text-box::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bar1 .text-box h1 {
+        font-size: 55px;
+        font-family: Josefin Sans;
+        font-weight: bold;
+    }
+
+    .bar1 .text-box p {
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        font-family: Poppins;
+    }
+
+
+
+    @media only screen and (max-width: 900px) {
+        .bar1 {
+            height: auto;
+            width: 100%;
+            display: block;
+            position: relative;
+        }
+
+        .bar1 .img-box {
+            position: relative;
+            height: 250px;
+            left: 0;
+            width: 100%;
+        }
+
+
+        .bar1 .text-box {
+            position: relative;
+            width: 100%;
+            right: 0;
+            padding: 10px;
+            height: fit-content;
+        }
+
+        .bar1 .text-box h1 {
+            text-align: center;
+            font-size: 35px;
+            width: 100%;
+        }
+
+        .bar1 .text-box p {
+            font-size: 15px;
+        }
+    }
+</style>
+
+<style>
+    .bar2 {
+        width: 90%;
+        position: relative;
+        height: 400px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 40px auto;
+    }
+
+    .bar2 .img-box {
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        right: 0;
+        width: 40%;
+    }
+
+    .bar2 .img-box::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bar2 .img-box img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        right: 0;
+    }
+
+    .bar2 .text-box {
+        position: absolute;
+        overflow-y: scroll;
+        width: 60%;
+        height: 100%;
+        left: 0;
+        padding: 20px;
+        z-index: 5;
+        text-align: left;
+    }
+    .bar2 .text-box::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bar2 .text-box h1 {
+        font-size: 60px;
+        font-family: Josefin Sans;
+        font-weight: bold;
+    }
+
+    .bar2 .text-box p {
+        width: 100%;
+        text-align: left;
+        font-size: 17px;
+        margin-left: 0;
+        font-family: Poppins;
+    }
+
+    @media only screen and (max-width: 900px) {
+        .bar2 {
+            height: auto;
+            width: 100%;
+            display: block;
+            position: relative;
+        }
+
+        .bar2 .img-box {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+            width: 100%;
+        }
+
+        .bar2 .text-box {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            height: fit-content;
+        }
+
+        .bar2 .text-box h1 {
+            text-align: center;
+            font-size: 35px;
+            width: 100%;
+        }
+
+        .bar2 .text-box p {
+            font-size: 15px;
+        }
+    }
+</style>
+
+
 
 
 
