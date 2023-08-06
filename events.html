@@ -651,7 +651,18 @@
     </div>
 
     <script id="footer" src="footer.js"></script>
-
+  <script>
+    // Function to increment the visitor count and update the display
+    function incrementVisitorCount() {
+      let count = parseInt(localStorage.getItem('visitorCount')) || 0;
+      count++;
+      localStorage.setItem('visitorCount', count);
+      document.getElementById('visitorCount').textContent = count;
+    }
+  
+    // Call the incrementVisitorCount function on page load
+    incrementVisitorCount();
+  </script>
 
 </body>
 
