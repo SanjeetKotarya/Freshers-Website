@@ -557,7 +557,22 @@
       }
     }
 
+.credit{
+  position: absolute;
+  bottom: 10px;
+  left:20px;
+}
+.credit a{
+  color:#9FA1AD;
+  font-family: Josefin Sans;
+  font-size: 12px;
+}
 
+@media only screen and (max-width: 900px) {
+  .credit{
+    display: none;
+  }
+}
   </style>
 
 
@@ -580,6 +595,10 @@
         <a class="btn_ScrollDown" href="#panel">
           <fish id="panel"></fish><span></span><span></span>
         </a>
+      </div>
+
+      <div class="credit">
+        <a href="https://youtu.be/MuFQ6MXRpuI">This video is the property of <u>IITM Hertige Center.</u></a>
       </div>
 
       <video autoplay muted loop>
