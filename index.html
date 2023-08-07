@@ -348,7 +348,7 @@
     .values h1 {
       font-family: Josefin Sans;
       width: 100%;
-      text-align: center;
+      text-align: left;
       font-size: 35px;
     }
 
@@ -416,24 +416,51 @@
     }
 
 
+    @media only screen and (min-width: 450px) and (max-width: 1000px) {
+      .values {
+      width: 90%;
+    }
+    .values h4 {
+        font-size: 12px;
+        text-align: center;
 
-
-    @media only screen and (max-width: 900px) {
-
-      .title {
-        font-size: 35px;
       }
 
+      .values h1 {
+        font-size: 30px;
+        text-align: center;
+      }
+      .vision p {
+        font-size: 15px;
+      }
+      .values ul {
+        font-size: 15px;
+      }
+      .values .child1 {
+        width: 70%;
+      }
+      .values .child2 {
+        width: 70%;
+        padding: 10px;
+        bottom: -20px;
+        right: 0;
+      }
+}
+    
+
+
+    @media only screen and (max-width: 450px) {
       .values h4 {
         font-size: 11px;
+        text-align: center;
       }
 
       .values h1 {
         font-size: 25px;
+        text-align: center;
       }
 
-      .vision,
-      .mission {
+      .vision {
         width: 90%;
       }
 
@@ -532,7 +559,15 @@
       }
     }
 
+
+    
     @media only screen and (max-width: 900px) {
+      .mission {
+        width: 90%;
+      }
+      .title {
+        font-size: 35px;
+      }
 
       .mission ul {
         font-size: 15px;
